@@ -10,14 +10,18 @@ function Nav() {
 
     return (
         <nav>
-            <div>
+            <div className="logo">
                 <Link to="/events"><img src="https://res.cloudinary.com/flifree/image/upload/v1605358493/Deep%20Tech%20Heroes/Deep_Tech_Heroes_rhjokp.jpg" alt=""></img></Link>
             </div>
-            <div>
+            <div className="nav-menu">
                 <Link to="/">Home</Link>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/events">Events</Link>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/heroes">Heroes</Link>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/hosts">Hosts</Link>
+                &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/contact">Contact Us</Link>
             </div>
             <div>
