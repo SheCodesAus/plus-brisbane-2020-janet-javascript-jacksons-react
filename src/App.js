@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav';
 import EventsPage from './pages/EventsPage';
 import EventPage from './pages/EventPage';
 import NewEventForm from './components/Forms/NewEventForm';
+import HomePage from './pages/HomePage';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
             <NewEventForm />
           </Route>
           <Route path="/" exact>
-            <EventsPage />
+            <HomePage />
           </Route>
         </Switch>
       </div>

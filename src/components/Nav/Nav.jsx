@@ -11,7 +11,7 @@ function Nav() {
     return (
         <nav>
             <div className="logo">
-                <Link to="/events"><img src="https://res.cloudinary.com/flifree/image/upload/v1605358493/Deep%20Tech%20Heroes/Deep_Tech_Heroes_rhjokp.jpg" alt=""></img></Link>
+                <Link to="/"><img src="https://res.cloudinary.com/flifree/image/upload/v1605358493/Deep%20Tech%20Heroes/Deep_Tech_Heroes_rhjokp.jpg" alt=""></img></Link>
             </div>
             <div className="nav-menu">
                 <Link to="/">Home</Link>
