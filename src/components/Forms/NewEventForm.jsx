@@ -61,7 +61,7 @@ function NewEventForm() {
                 required
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_description'>Event Details</label>
             <input
                 type='textarea'
@@ -69,21 +69,21 @@ function NewEventForm() {
                 required
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_location'>Event Location</label>
             <input
                 type='text'
                 id='event_location'
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='skills_required'>Hero Skills Required</label>
             <input
                 type='text'
                 id="skills_required"
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_size'>Event Size</label>
             <select id='event_size' onChange={handleChange}>
                 <option value="1">Intimate - less than 50 attendees</option>
@@ -111,14 +111,14 @@ function NewEventForm() {
                 value='fa;se'
                 onChange={handleChange}
             />
-
+            <br/>
             <label>Event Image or Logo</label>
             <input
                 type='url'
                 id='image'
                 onChange={handleChange}
             />
-
+            <br/>
             <button
                 type='submit'
                 onClick={ handleSubmit }>
