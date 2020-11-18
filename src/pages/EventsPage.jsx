@@ -6,7 +6,7 @@ function EventsPage() {
     const [eventList, setEventList] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/events/`, {
+        fetch(`${process.env.REACT_APP_API_URL}events/`, {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
