@@ -4,10 +4,7 @@ import './Nav.css';
 
 
 function Nav() {
-    function handleClick(e) {
-        e.preventDefault();
-    }
-
+    
     return (
         <nav>
             <div className="logo">
