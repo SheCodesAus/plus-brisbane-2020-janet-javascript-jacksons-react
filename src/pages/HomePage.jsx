@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function HomePage() {
     return (
         <div id="home-page">
-            <h1>Deep Tech Heros</h1>
+            <h1>Deep Tech Heroes</h1>
 
             <Link to="/"><img src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_10_cwdfqx.png" alt=""></img></Link>
 
@@ -47,7 +47,7 @@ function HomePage() {
             Simply sign up fill in all the information and then have a look around and see what events you would be able to bring value to!
              </p>
 
-            <Link to='/new'><button type="button">I'm a HERO!</button></Link>
+            <Link to='/new'><button type="button">Become a HERO</button></Link>
 
             <h3>Are you a Host?</h3>
 
@@ -59,7 +59,7 @@ function HomePage() {
  
              </p>
 
-            <Link to='/new'><button type="button">I'm a HOST!</button></Link>
+            <Link to='/new'><button type="button">Become a HOST</button></Link>
 
             <h2>We are here to help</h2>
 
@@ -71,7 +71,7 @@ function HomePage() {
 
             <Link to="/">Facebook</Link>
 
-            <p>Copyright 2020 Deep Tech Heros. All rights reserved.</p>
+            <p>Copyright 2020 Deep Tech Heroes. All rights reserved.</p>
 
         </div>
 
