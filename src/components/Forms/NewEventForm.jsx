@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewEventForm() {
@@ -43,7 +43,7 @@ function NewEventForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         postData().then((response) => {
-            window.localStorage.setItem('event', response.event);
+            window.localStorage.setItem("event", response.event);
             history.push('/events');
         });
     };
@@ -78,11 +78,13 @@ function NewEventForm() {
             />
 
             <label htmlFor='skills_required'>Hero Skills Required</label>
-            <input
-                type='text'
-                id="skills_required"
-                onChange={handleChange}
-            />
+            <select id="skills_required" onChange={handleChange}>
+                <option value="1">Keynote Speaker</option>
+                <option value="2">Workshop Facilitator</option>
+                <option value="3">Tech Mentor</option>
+                <option value="4">Topic Expert</option>
+            </select>
+            <br/>
 
             <label htmlFor='event_size'>Event Size</label>
             <select id='event_size' onChange={handleChange}>
@@ -108,7 +110,7 @@ function NewEventForm() {
             <input
                 type='radio'
                 id='is_paid'
-                value='fa;se'
+                value='false'
                 onChange={handleChange}
             />
 
@@ -118,6 +120,7 @@ function NewEventForm() {
                 id='image'
                 onChange={handleChange}
             />
+            <br/>
 
             <button
                 type='submit'
