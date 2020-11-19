@@ -9,12 +9,12 @@ function EventsPage() {
         fetch(`${process.env.REACT_APP_API_URL}events/`, {
             headers: {
                 "Content-Type": "application/json",
-                // "Accept": "application/json"
+                "Accept": "application/json"
             },
         })
         .then((results) => {
-            return results.json();
-            console.log(results.json)
+            // return results.json();
+            console.log(results)
         })
         .then((data) => {
             setEventList(data);
