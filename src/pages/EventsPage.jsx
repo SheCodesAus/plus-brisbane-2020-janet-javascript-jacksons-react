@@ -26,8 +26,6 @@ function EventsPage() {
             <Link to='/new'><button type="button">Create an Event</button></Link>
             <div>
                 <h1>Events</h1>
-            </div>
-            <div id='event-list'>
                 {eventList.map((eventData, key) => {
                     return <EventCard key={key} eventData={eventData} />;
                 })}
