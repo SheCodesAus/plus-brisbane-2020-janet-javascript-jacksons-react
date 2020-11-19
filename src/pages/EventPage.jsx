@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function EventPage() {
     const [eventData, setEventData] = useState({ events: [], applications: [] });
@@ -29,7 +29,7 @@ function EventPage() {
             </div>
             <div className='event-description'>
                 <p>{ eventData.event_description }</p>
-                <button type='button'>Apply</button>
+                <Link to="/apply"><button type='button'>Apply</button></Link>
             </div>
             <div>
                 <h3>Heroes Confirmed</h3>

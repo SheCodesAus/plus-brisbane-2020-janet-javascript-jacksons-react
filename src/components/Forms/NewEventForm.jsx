@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewEventForm() {
@@ -24,7 +24,7 @@ function NewEventForm() {
     const history = useHistory();
 
     const postData = async () => {
-        // const token = window.localStoarge.getItem('token')
+        // const token = window.localStorage.getItem('token')
 
         const response = await fetch (
             `${process.env.REACT_APP_API_URL}/events/new/`,

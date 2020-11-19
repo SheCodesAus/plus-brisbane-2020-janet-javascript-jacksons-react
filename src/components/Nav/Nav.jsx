@@ -22,6 +22,7 @@ function Nav() {
                 <Link to="/contact">Contact Us</Link>
             </div>
             <div>
+                <Link to="/signin">Sign In</Link> &nbsp;
                 <Link to="/signout">Sign Out</Link>
             </div>
         </nav>
