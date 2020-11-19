@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewApplicationForm() {
@@ -7,6 +7,16 @@ function NewApplicationForm() {
         reason_apply: "",
     });
 
+    const handleChange = (e) => {
+        e.preventDefault();
+        const { id, value } = e.target;
+        setNewApplication((prevEvent) => ({
+            ...prevEvent,
+            [id]: value,
+        }));
+    }
+
+    const history = useHistory();
 
 
     return (
