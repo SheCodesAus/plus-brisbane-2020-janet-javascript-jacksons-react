@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav';
 import EventsPage from './pages/EventsPage';
 import EventPage from './pages/EventPage';
 import NewEventForm from './components/Forms/NewEventForm';
+import ApplicationsPage from './pages/ApplicationsPage';
 import NewApplicationForm from './components/Forms/NewApplicationForm';
 
 
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path='/new'>
             <NewEventForm />
+          </Route>
+          <Route path='/applications' exact>
+            <ApplicationsPage />
           </Route>
           <Route path='/apply'>
             <NewApplicationForm />
