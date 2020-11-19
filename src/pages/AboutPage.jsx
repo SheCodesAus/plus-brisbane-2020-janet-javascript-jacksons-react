@@ -9,7 +9,7 @@ function About() {
             <h2>Who is in J-cubed</h2>
             <div>
                 <h3>Our Team</h3>
-                <ul>
+                <ul className="team-list">
                     <li>Ati</li>
                     <li>Joy</li>
                     <li>Rebecca</li>
@@ -19,7 +19,7 @@ function About() {
             </div>
             <div>
                 <h3>Our Mentors</h3>
-                <ul>
+                <ul className="team-list">
                     <li>Carlie</li>
                     <li>Hayley</li>
                     <li>Michelle</li>

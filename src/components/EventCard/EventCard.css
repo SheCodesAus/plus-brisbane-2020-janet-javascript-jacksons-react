@@ -1,0 +1,18 @@
+.event-card {
+    width: 90%;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.event-card:hover {
+    width: 92%;
+    box-shadow: #b9b9b9;
+}
