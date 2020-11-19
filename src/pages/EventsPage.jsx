@@ -14,6 +14,7 @@ function EventsPage() {
         })
         .then((results) => {
             return results.json();
+            console.log(results)
         })
         .then((data) => {
             setEventList(data);
