@@ -6,8 +6,6 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import EventPage from './pages/EventPage';
 import EventsPage from './pages/EventsPage';
-import ApplicationPage from './pages/ApplicationPage';
-import ApplicationsPage from './pages/ApplicationsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
 import HeroPage from './pages/HeroPage';
@@ -20,8 +18,6 @@ import SignOutPage from './pages/SignOutPage';
 import BecomeHeroPage from './pages/BecomeHeroPage';
 import BecomeHostPage from './pages/BecomeHostPage';
 import NewEventPage from './pages/NewEventPage';
-import NewApplicationPage from './pages/NewApplicationPage';
-import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
 import UnauthPage from './pages/UnauthPage';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
@@ -46,12 +42,6 @@ function App() {
           </Route>
           <Route path="/events">
             <EventsPage />
-          </Route>
-          <Route path="/applications/:id">
-            <ApplicationPage />
-          </Route>
-          <Route path="/applications" exact>
-            <ApplicationsPage />
           </Route>
           <Route path="/users/:id">
             <UserPage />
@@ -88,12 +78,6 @@ function App() {
           </Route>
           <Route path="/newevent">
             <NewEventPage />
-          </Route>
-          <Route path="/apply">
-            <NewApplicationPage />
-          </Route>
-          <Route path="/confirmapplication">
-            <ConfirmApplicationPage />
           </Route>
           <Route path="/unauthorised">
             <UnauthPage />

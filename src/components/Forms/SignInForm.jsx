@@ -38,7 +38,7 @@ function SignInForm() {
         postData().then((response) => {
         window.localStorage.setItem("token", response.token);
         window.localStorage.setItem("user", credentials.username);
-        history.push("/");
+        history.push("/events");
         });
         }
     };
