@@ -26,7 +26,7 @@ function EventsPage() {
             <div>
                 <h1>Events</h1>
             </div>
-            <div id='event-list'>
+            <div>
                 {eventList.map((eventData, key) => {
                     return <EventCard key={key} eventData={eventData} />;
                 })}
