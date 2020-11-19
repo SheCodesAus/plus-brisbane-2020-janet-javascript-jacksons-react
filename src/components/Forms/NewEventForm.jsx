@@ -61,7 +61,7 @@ function NewEventForm() {
                 required
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_description'>Event Details</label>
             <input
                 type='textarea'
@@ -69,14 +69,14 @@ function NewEventForm() {
                 required
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_location'>Event Location</label>
             <input
                 type='text'
                 id='event_location'
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='skills_required'>Hero Skills Required</label>
             <select id="skills_required" onChange={handleChange}>
                 <option value="1">Keynote Speaker</option>
@@ -113,7 +113,7 @@ function NewEventForm() {
                 value='false'
                 onChange={handleChange}
             />
-
+            <br/>
             <label>Event Image or Logo</label>
             <input
                 type='url'
