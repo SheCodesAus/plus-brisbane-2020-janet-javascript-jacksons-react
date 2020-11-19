@@ -8,10 +8,10 @@ import EventPage from './pages/EventPage';
 import EventsPage from './pages/EventsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
-import HeroPage from './pages/HeroPage';
-import HeroesPage from './pages/HeroesPage';
-import HostPage from './pages/HostPage';
-import HostsPage from './pages/HostsPage';
+// import HeroPage from './pages/HeroPage';
+// import HeroesPage from './pages/HeroesPage';
+// import HostPage from './pages/HostPage';
+// import HostsPage from './pages/HostsPage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import SignOutPage from './pages/SignOutPage';
@@ -19,7 +19,7 @@ import BecomeHeroPage from './pages/BecomeHeroPage';
 import BecomeHostPage from './pages/BecomeHostPage';
 import NewEventPage from './pages/NewEventPage';
 import UnauthPage from './pages/UnauthPage';
-import ErrorPage from './pages/ErrorPage';
+// import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import Footer from './components/Nav/Footer';
 
@@ -49,23 +49,23 @@ function App() {
           <Route path="/users">
             <UsersPage />
           </Route>
-          <Route path="/hero/:username">
+          {/* <Route path="/hero/:username">
             <HeroPage />
-          </Route>
-          <Route path="/heroes">
+          </Route> */}
+          {/* <Route path="/heroes">
             <HeroesPage />
-          </Route>
-          <Route path="/host/:username">
+          </Route> */}
+          {/* <Route path="/host/:username">
             <HostPage />
-          </Route>
+          </Route> */}
+          {/* <Route path="/hosts">
+            <HostsPage />
+          </Route> */}
           <Route path="/becomehero">
             <BecomeHeroPage />
           </Route>
           <Route path="/becomehost">
             <BecomeHostPage />
-          </Route>
-          <Route path="/hosts">
-            <HostsPage />
           </Route>
           <Route path="/signup">
             <SignUpPage />
@@ -85,7 +85,7 @@ function App() {
           <Route path="/" exact>
             <HomePage />
           </Route>
-          <Route component={ErrorPage} />
+          {/* <Route component={ErrorPage} /> */}
         </Switch>
 
         <Footer />
