@@ -9,12 +9,11 @@ function EventsPage() {
         fetch(`${process.env.REACT_APP_API_URL}events/`, {
             headers: {
                 "Content-Type": "application/json",
-                // "Accept": "application/json"
+                "Accept": "application/json"
             },
         })
         .then((results) => {
-            // return results.json();
-            console.log(results)
+            return results.json();
         })
         .then((data) => {
             setEventList(data);
@@ -23,7 +22,7 @@ function EventsPage() {
 
     return (
         <div id='events'>
-            <Link to='/new'><button type="button">Create an Event</button></Link>
+            <Link to='/newevent'><button type="button">Create an Event</button></Link>
             <div>
                 <h1>Events</h1>
             </div>

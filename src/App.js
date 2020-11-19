@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import EventPage from './pages/EventPage';
 import EventsPage from './pages/EventsPage';
 import ApplicationPage from './pages/ApplicationPage';
@@ -12,15 +14,18 @@ import HeroPage from './pages/HeroPage';
 import HeroesPage from './pages/HeroesPage';
 import HostPage from './pages/HostPage';
 import HostsPage from './pages/HostsPage';
-import NewUserPage from './pages/NewUserPage';
+import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import SignOutPage from './pages/SignOutPage';
-import NewEventPage from './pages.NewEventPage';
+import BecomeHeroPage from './pages/BecomeHeroPage';
+import BecomeHostPage from './pages/BecomeHostPage';
+import NewEventPage from './pages/NewEventPage';
 import NewApplicationPage from './pages/NewApplicationPage';
 import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
 import UnauthPage from './pages/UnauthPage';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
+import Footer from './components/Nav/Footer';
 
 
 function App() {
@@ -32,6 +37,9 @@ function App() {
         <Switch>
           <Route path="/about">
             <AboutPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
           </Route>
           <Route path="/events/:id">
             <EventPage />
@@ -60,11 +68,17 @@ function App() {
           <Route path="/host/:username">
             <HostPage />
           </Route>
+          <Route path="/becomehero">
+            <BecomeHeroPage />
+          </Route>
+          <Route path="/becomehost">
+            <BecomeHostPage />
+          </Route>
           <Route path="/hosts">
             <HostsPage />
           </Route>
-          <Route path="/newuser">
-            <NewUserPage />
+          <Route path="/signup">
+            <SignUpPage />
           </Route>
           <Route path="/signin">
             <SignInPage />
@@ -89,6 +103,8 @@ function App() {
           </Route>
           <Route component={ErrorPage} />
         </Switch>
+
+        <Footer />
       </div>
     </Router>
   ); 
