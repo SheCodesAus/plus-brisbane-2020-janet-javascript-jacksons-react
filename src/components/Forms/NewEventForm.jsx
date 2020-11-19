@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewEventForm() {
@@ -22,17 +22,18 @@ function NewEventForm() {
     }
 
     const history = useHistory();
+    var statuscode = 0;
 
     const postData = async () => {
-        // const token = window.localStorage.getItem('token')
+        const token = window.localStorage.getItem('token')
 
         const response = await fetch (
-            `${process.env.REACT_APP_API_URL}/events/new/`,
+            `${process.env.REACT_APP_API_URL}events/new/`,
             {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
-                    // 'Authorization': `Token ${token}`
+                    'Authorization': `Token ${token}`
                 },
                 body: JSON.stringify(event),
             }
@@ -42,9 +43,16 @@ function NewEventForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postData().then((response) => {
-            window.localStorage.setItem("event", response.event);
-            history.push('/events');
+        postData()
+        .then((response) => {
+            if(statuscode === 201) {
+                setNewEvent(response);
+                window.localStorage.setItem("event", response.event);
+                history.push('/events');
+            } else {
+                console.log(statuscode);
+                history.push("/unauthorised");
+            };
         });
     };
 

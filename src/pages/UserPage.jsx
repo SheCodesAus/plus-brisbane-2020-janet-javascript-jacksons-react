@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Components } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 function UserPage() {
@@ -6,7 +6,7 @@ function UserPage() {
     const { id } = useParams();
 
     useEffect(() => {
-        const token = window.localStorage.getItem("token")
+        // const token = window.localStorage.getItem("token")
 
         fetch(`${process.env.REACT_APP_API_URL}users/${id}`, {
             headers: {
