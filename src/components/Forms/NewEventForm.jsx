@@ -22,17 +22,18 @@ function NewEventForm() {
     }
 
     const history = useHistory();
+    var statuscode = 0;
 
     const postData = async () => {
-        // const token = window.localStoarge.getItem('token')
+        const token = window.localStorage.getItem('token')
 
         const response = await fetch (
-            `${process.env.REACT_APP_API_URL}/events/new/`,
+            `${process.env.REACT_APP_API_URL}events/new/`,
             {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
-                    // 'Authorization': `Token ${token}`
+                    'Authorization': `Token ${token}`
                 },
                 body: JSON.stringify(event),
             }
@@ -42,9 +43,16 @@ function NewEventForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postData().then((response) => {
-            window.localStorage.setItem("event", response.event);
-            history.push('/events');
+        postData()
+        .then((response) => {
+            if(statuscode === 201) {
+                setNewEvent(response);
+                window.localStorage.setItem("event", response.event);
+                history.push('/events');
+            } else {
+                console.log(statuscode);
+                history.push("/unauthorised");
+            };
         });
     };
 
@@ -61,7 +69,7 @@ function NewEventForm() {
                 required
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_description'>Event Details</label>
             <input
                 type='textarea'
@@ -69,14 +77,14 @@ function NewEventForm() {
                 required
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='event_location'>Event Location</label>
             <input
                 type='text'
                 id='event_location'
                 onChange={handleChange}
             />
-
+            <br/>
             <label htmlFor='skills_required'>Hero Skills Required</label>
             <select id="skills_required" onChange={handleChange}>
                 <option value="1">Keynote Speaker</option>
@@ -113,7 +121,7 @@ function NewEventForm() {
                 value='false'
                 onChange={handleChange}
             />
-
+            <br/>
             <label>Event Image or Logo</label>
             <input
                 type='url'

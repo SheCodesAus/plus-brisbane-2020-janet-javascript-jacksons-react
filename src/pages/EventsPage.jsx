@@ -22,7 +22,7 @@ function EventsPage() {
 
     return (
         <div id='events'>
-            <Link to='/new'><button type="button">Create an Event</button></Link>
+            <Link to='/newevent'><button type="button">Create an Event</button></Link>
             <div>
                 <h1>Events</h1>
             </div>

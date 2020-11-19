@@ -36,7 +36,7 @@ function HomePage() {
 
             <h3>Are you a Hero?</h3>
 
-            <Link to="/"><img src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_10_cwdfqx.png" alt=""></img></Link>
+            <Link to="/"><img src="https://res.cloudinary.com/flifree/image/upload/v1605350478/Deep%20Tech%20Heroes/DTH_18_kw6kn9.png" alt=""></img></Link>
 
             <p>Are you an enthusiastic about all things deep tech and where it will take the world? Are you excited about the future with AI? Interested in how blockchain can disrupt governments? Or hoping to build the next great thing in robotics? 
  
@@ -47,11 +47,11 @@ function HomePage() {
             Simply sign up fill in all the information and then have a look around and see what events you would be able to bring value to!
              </p>
 
-            <Link to='/new'><button type="button">Become a HERO</button></Link>
+            <Link to='/becomehero'><button type="button">Become a HERO</button></Link>
 
             <h3>Are you a Host?</h3>
 
-            <Link to="/"><img src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_10_cwdfqx.png" alt=""></img></Link>
+            <Link to="/"><img src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_12_qg3kc9.png" alt=""></img></Link>
 
             <p>Are you an organisation that is looking to create and innovate? Are you looking to help people from all walks of life find their place in this fantastic world? Do you want to host a webinar? A meet and greet? A masterclass? Do you need people with a specific focus in deep tech? 
  
@@ -59,19 +59,9 @@ function HomePage() {
  
              </p>
 
-            <Link to='/new'><button type="button">Become a HOST</button></Link>
+            <Link to='/becomehost'><button type="button">Become a HOST</button></Link>
 
-            <h2>We are here to help</h2>
-
-            <p>We are here to help</p>
-
-            <Link to="/">LinkedIn</Link>
-
-            <Link to="/">Twitter</Link>
-
-            <Link to="/">Facebook</Link>
-
-            <p>Copyright 2020 Deep Tech Heroes. All rights reserved.</p>
+            
 
         </div>
 
