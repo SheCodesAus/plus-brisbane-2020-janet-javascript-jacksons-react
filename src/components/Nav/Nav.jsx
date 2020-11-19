@@ -15,9 +15,9 @@ function Nav() {
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/events">Events</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <Link to="/heroes">Heroes</Link>
+                <Link to="/users">Heroes</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <Link to="/hosts">Hosts</Link>
+                <Link to="/users">Hosts</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/contact">Contact Us</Link>
             </div>
