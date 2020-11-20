@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function EventPage() {
-    const [eventData, setEventData] = useState({ events: [] });
+    const [eventData, setEventData] = useState({ events: [], applications: [] });
     const { id } = useParams();
 
     useEffect(() => {
@@ -29,7 +29,20 @@ function EventPage() {
             </div>
             <div className='event-description'>
                 <p>{ eventData.event_description }</p>
-                <button type='button'>Apply</button>
+                <Link to="/apply"><button type='button'>Apply</button></Link>
+            </div>
+            <div>
+                <h3>Heroes Confirmed</h3>
+                <ul>
+                    {eventData.applications.map((applicationData, key) => {
+                        return (
+                            <li key={key}>
+                                {/* <IsAccepted applicationData={ applicationData }/> */}
+                                <p>{applicationData.reason_apply}</p>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </div>
     );
