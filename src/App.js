@@ -22,6 +22,8 @@ import UnauthPage from './pages/UnauthPage';
 // import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import Footer from './components/Nav/Footer';
+import ApplicationsPage from './pages/ApplicationsPage';
+import NewApplicationForm from './components/Forms/NewApplicationForm';
 
 
 function App() {
@@ -81,6 +83,12 @@ function App() {
           </Route>
           <Route path="/unauthorised">
             <UnauthPage />
+          </Route>
+          <Route path='/applications' exact>
+            <ApplicationsPage />
+          </Route>
+          <Route path='/apply'>
+            <NewApplicationForm />
           </Route>
           <Route path="/" exact>
             <HomePage />
