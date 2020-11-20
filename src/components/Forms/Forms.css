@@ -25,12 +25,13 @@ button {
     width: 25%;
     height: 50px;
     margin-top: 14px;
-    background-color: #ffffff;
     font-size: 18px;
 }
 
 button:hover {
     background-color: #7E7C73;
+    color: #171515;
+    border: 3px solid #171515;
 }
 
 .create-form {

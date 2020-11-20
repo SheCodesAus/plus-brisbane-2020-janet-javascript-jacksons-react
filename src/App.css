@@ -2,10 +2,10 @@
     box-sizing: border-box;
 }
 
-img {
+/* img {
     width: 100%;
     height: auto;
-}
+} */
 
 h1 {
     color: #171515;
@@ -54,7 +54,7 @@ button {
 }
 
 button:hover {
-    background-color: #ffed86;
+    background-color: #7E7C73;
     color: #171515;
     border: 3px solid #171515;
 }
@@ -66,9 +66,9 @@ button:hover {
     row-gap: 10px;
 }
 
-#event-list {
+#events-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28%,1fr));
-    column-gap: 10px;
-    row-gap: 10px;
+    column-gap: 3%;
+    row-gap: 15px;
 }

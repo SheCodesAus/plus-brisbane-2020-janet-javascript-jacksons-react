@@ -1,5 +1,5 @@
 .event-card {
-    width: 90%;
+    width: 98%;
     margin: 10px;
     background-color: #f9f9f9;
     border-radius: 3px;
@@ -13,6 +13,9 @@
 }
 
 .event-card:hover {
-    width: 91%;
-    box-shadow: #b9b9b9;
+    width: 100%;
+}
+
+.event-card h3 {
+    color: #171515;
 }
