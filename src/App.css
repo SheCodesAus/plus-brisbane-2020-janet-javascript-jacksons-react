@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+/* img {
+    width: 100%;
+    height: auto;
+} */
+
+h1 {
+    color: #171515;
+    font-family: Tahoma, sans-serif;
+    font-size: x-large;
+    text-align: center;
+    padding: 14px 14px;
+}
+
+h3 {
+    color: #171515;
+    font-family: Tahoma, sans-serif;
+    font-size: large;
+    padding: 7px 14px;
+    text-align: center;
+    text-decoration: none;
+}
+
+p {
+    font-family: Tahoma, sans-serif;
+    font-size: medium;
+}
+
+ul.team-list {
+    display: inline-block;
+    list-style-type: circle;
+    font-size: medium;
+    padding: 7px 36px;
+}
+
+li {
+    padding: 5px;
+}
+
+button {
+    background-color: #f9f9f9;
+    display: inline-block;
+    border: 2px solid #171515;
+    color: #171515;
+    padding: 14px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    border-radius: 3px;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    background-color: #7E7C73;
+    color: #171515;
+    border: 3px solid #171515;
+}
+
+#users-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28%,1fr));
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28%,1fr));
+    column-gap: 3%;
+    row-gap: 15px;
+}

@@ -1,0 +1,47 @@
+input {
+    width: 50%;
+    padding: 14px 24px;
+    margin: 8px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 2px solid #4E4F50;
+}
+
+input [type=text]:focus {
+    border: 6px solid #4E4F50;
+}
+
+select {
+    width: 40%; 
+    margin: 10px 0 10px 24px;
+    color: #7E7C73;
+    padding: 14px 24px;
+    font-size: 18px;
+    border: 2px solid #4E4F50;
+    border-radius: 3px;
+}
+
+button {
+    width: 25%;
+    height: 50px;
+    margin-top: 14px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #7E7C73;
+    color: #171515;
+    border: 3px solid #171515;
+}
+
+.create-form {
+    margin: 0 15% 0 15%;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    padding-right: 30px;
+}
