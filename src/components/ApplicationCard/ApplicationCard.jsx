@@ -7,8 +7,9 @@ function ApplicationCard(props) {
     return (
         <div className='application-card'>
             <Link to={`/applications/${applicationData.id}`}>
-                <img src={ applicationData.image } alt="" />
-                <h3>{ applicationData.application_name }</h3>
+                <h3>reason to apply: { applicationData.reason_apply }</h3>
+                <h3> Application for event: { applicationData.event }</h3>
+
             </Link>
         </div>
     );
