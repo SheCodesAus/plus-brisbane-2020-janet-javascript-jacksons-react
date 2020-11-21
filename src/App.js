@@ -5,7 +5,7 @@ import Nav from './components/Nav/Nav';
 import EventsPage from './pages/EventsPage';
 import EventPage from './pages/EventPage';
 import NewEventForm from './components/Forms/NewEventForm';
-import NotFound from './pages/NotFound';
+import NotFoundPage from './pages/NotFoundPage';
 
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           <Route path="/" exact>
             <EventsPage />
           </Route>
-          <Route component={NotFound} >
+          <Route component={NotFoundPage} >
         </Route>
         </Switch>
       </div>
