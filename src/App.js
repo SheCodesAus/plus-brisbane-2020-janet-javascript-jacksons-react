@@ -1,3 +1,4 @@
+// test
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -5,6 +6,7 @@ import Nav from './components/Nav/Nav';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import EventPage from './pages/EventPage';
+import NotFound from './pages/NotFoundPage';
 import EventsPage from './pages/EventsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
@@ -22,6 +24,9 @@ import UnauthPage from './pages/UnauthPage';
 // import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import Footer from './components/Nav/Footer';
+import ApplicationsPage from './pages/ApplicationsPage';
+import NewApplicationForm from './components/Forms/NewApplicationForm';
+
 
 
 function App() {
@@ -82,10 +87,18 @@ function App() {
           <Route path="/unauthorised">
             <UnauthPage />
           </Route>
+          <Route path='/applications' exact>
+            <ApplicationsPage />
+          </Route>
+          <Route path='/apply'>
+            <NewApplicationForm />
+          </Route>
           <Route path="/" exact>
             <HomePage />
           </Route>
-          {/* <Route component={ErrorPage} /> */}
+          <Route component={NotFound} >
+        </Route>
+
         </Switch>
 
         <Footer />
@@ -95,3 +108,5 @@ function App() {
 }
 
 export default App;
+
+// comment for commit
