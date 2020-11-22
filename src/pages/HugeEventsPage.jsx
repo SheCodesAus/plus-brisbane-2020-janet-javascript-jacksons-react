@@ -8,7 +8,7 @@ function EventsPage() {
     const [eventList, setEventList] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}events/`, {
+        fetch(`${process.env.REACT_APP_API_URL}events/huge/`, {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
@@ -23,11 +23,7 @@ function EventsPage() {
     }, []);
 
     return (
-        <div id='events'>
-            <Link to='/newevent'><button type="button">Create an Event</button></Link>
-            <div>
-                <h1>Events</h1>
-            </div>
+        <div>
             <div>
                 <EventsFilter />
             </div>
