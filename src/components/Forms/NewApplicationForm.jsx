@@ -7,6 +7,11 @@ function NewApplicationForm() {
         event_id: "",
         reason_apply: "",
         event: "",
+        skills_keynote: false,
+        skills_facilitator: false,
+        skills_mentor: false,
+        skills_expert: false,
+        skills_enthusiast: false,
     });
 
     const handleChange = (e) => {
@@ -61,13 +66,59 @@ function NewApplicationForm() {
                     onChange={handleChange}
                 />
                 <br/>
-                <label htmlFor='reason_apply'>Reason to Apply</label>
-                <input
-                    type='text'
-                    id='reason_apply'
-                    required
-                    onChange={handleChange}
-                />
+                <p>What type of skills do you like to volunteer for the event?</p>
+                    <label htmlFor='skills_keynote'>Keynote Speaker</label>
+                    &nbsp;
+                    <input
+                        type='checkbox'
+                        id='skills_keynote'
+                        value='true'
+                        onChange={handleChange}
+                    />
+                    <br/>
+                    <label htmlFor='skills_facilitator'>Workshop Facilitator</label>
+                    &nbsp;
+                    <input
+                        type='checkbox'
+                        id='skills_facilitator'
+                        value='true'
+                        onChange={handleChange}
+                    />
+                    <br/>
+                    <label htmlFor='skills_mentor'>Supportive Mentor</label>
+                    &nbsp;
+                    <input
+                        type='checkbox'
+                        id='skills_mentor'
+                        value='true'
+                        onChange={handleChange}
+                    />
+                    <br/>
+                    <label htmlFor='skills_expert'>Topic Expert</label>
+                    &nbsp;
+                    <input
+                        type='checkbox'
+                        id='skills_expert'
+                        value='true'
+                        onChange={handleChange}
+                    />
+                    <br/>
+                    <label htmlFor='skills_enthusiast'>Deep Tech Enthusiast</label>
+                    &nbsp;
+                    <input
+                        type='checkbox'
+                        id='skills_enthusiast'
+                        value='true'
+                        onChange={handleChange}
+                    />
+                    <br/>
+                        <label htmlFor='reason_apply'>Reason to Apply</label>
+                        <input
+                            type='text'
+                            id='reason_apply'
+                            required
+                            onChange={handleChange}
+                        />
                 <button
                     type='submit'
                     onClick={ handleSubmit }>
