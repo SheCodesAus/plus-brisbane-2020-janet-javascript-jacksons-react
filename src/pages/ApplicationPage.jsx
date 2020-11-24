@@ -18,7 +18,7 @@ function ApplicationPage() {
         .then((data) => {
             setApplicationData(data);
         });
-    }, []);
+    }, [id]);
 
     return (
         <div>
