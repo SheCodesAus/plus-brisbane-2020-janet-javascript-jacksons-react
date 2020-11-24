@@ -6,7 +6,19 @@ import Nav from './components/Nav/Nav';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import EventPage from './pages/EventPage';
+import NotFound from './pages/NotFoundPage';
 import EventsPage from './pages/EventsPage';
+import KeynoteEventsPage from './pages/KeynoteEventsPage';
+import FacilitatorEventsPage from './pages/FacilitatorEventsPage';
+import MentorEventsPage from './pages/MentorEventsPage';
+import ExpertEventsPage from './pages/ExpertEventsPage';
+import EnthusiastEventsPage from './pages/EnthusiastEventsPage';
+import IntimateEventsPage from './pages/IntimateEventsPage';
+import SmallEventsPage from './pages/SmallEventsPage';
+import MediumEventsPage from './pages/MediumEventsPage';
+import LargeEventsPage from './pages/LargeEventsPage';
+import VeryLargeEventsPage from './pages/VeryLargeEventsPage';
+import HugeEventsPage from './pages/HugeEventsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
 // import HeroPage from './pages/HeroPage';
@@ -20,13 +32,13 @@ import BecomeHeroPage from './pages/BecomeHeroPage';
 import BecomeHostPage from './pages/BecomeHostPage';
 import NewEventPage from './pages/NewEventPage';
 import UnauthPage from './pages/UnauthPage';
-// import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 import Footer from './components/Nav/Footer';
 import ApplicationsPage from './pages/ApplicationsPage';
 import ApplicationPage from './pages/ApplicationPage';
 import NewApplicationForm from './components/Forms/NewApplicationForm';
 import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
+
 
 function App() {
   return (
@@ -44,8 +56,41 @@ function App() {
           <Route path="/events/:id">
             <EventPage />
           </Route>
-          <Route path="/events">
+          <Route path="/events" exact>
             <EventsPage />
+          </Route>
+          <Route path="/keynote">
+            <KeynoteEventsPage />
+          </Route>
+          <Route path="/facilitator">
+            <FacilitatorEventsPage />
+          </Route>
+          <Route path="/mentor">
+            <MentorEventsPage />
+          </Route>
+          <Route path="/expert">
+            <ExpertEventsPage />
+          </Route>
+          <Route path="/enthusiast">
+            <EnthusiastEventsPage />
+          </Route>
+          <Route path="/intimate">
+            <IntimateEventsPage />
+          </Route>
+          <Route path="/small">
+            <SmallEventsPage />
+          </Route>
+          <Route path="/medium">
+            <MediumEventsPage />
+          </Route>
+          <Route path="/large">
+            <LargeEventsPage />
+          </Route>
+          <Route path="/verylarge">
+            <VeryLargeEventsPage />
+          </Route>
+          <Route path="/huge">
+            <HugeEventsPage />
           </Route>
           <Route path="/users/:id">
             <UserPage />
@@ -101,7 +146,9 @@ function App() {
           <Route path="/" exact>
             <HomePage />
           </Route>
-          {/* <Route component={ErrorPage} /> */}
+          <Route component={NotFound} >
+        </Route>
+
         </Switch>
 
         <Footer />
@@ -111,3 +158,5 @@ function App() {
 }
 
 export default App;
+
+// comment for commit
