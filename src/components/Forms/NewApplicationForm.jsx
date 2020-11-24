@@ -37,13 +37,13 @@ function NewApplicationForm() {
         return response.json();
     };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     postData().then((response) => {
-    //         window.localStorage.setItem('application', response.application);
-    //         history.push('/applications');
-    //     });
-    // };
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        postData().then((response) => {
+            window.localStorage.setItem('application', response.application);
+            history.push('/ConfirmApplication');
+        });
+    };
 
     return (
             <form className='create-form'>
@@ -68,9 +68,11 @@ function NewApplicationForm() {
                     required
                     onChange={handleChange}
                 />
-                <Link to='/ConfirmApplication'>
-                    <button type='submit' > Apply </button>
-                </Link>
+                <button
+                    type='submit'
+                    onClick={ handleSubmit }>
+                    Apply
+                </button>
 
             </form>
     );

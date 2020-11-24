@@ -6,7 +6,7 @@ function ApplicationPage() {
     const { id } =useParams();
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}applications/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}applications/${id}/`, {
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
