@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 import './Forms.css';
 
 function NewApplicationForm() {
@@ -34,13 +36,13 @@ function NewApplicationForm() {
         return response.json();
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        postData().then((response) => {
-            window.localStorage.setItem('application', response.application);
-            history.push('/applications');
-        });
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     postData().then((response) => {
+    //         window.localStorage.setItem('application', response.application);
+    //         history.push('/applications');
+    //     });
+    // };
 
     return (
             <form className='create-form'>
@@ -55,7 +57,10 @@ function NewApplicationForm() {
                     onChange={handleChange}
                 />
 
-                <button type='submit' onClick={ handleSubmit }> Apply </button>
+                <Link to='/ConfirmApplication'>
+                    <button type='submit' > Apply </button>
+                </Link>
+
             </form>
     );
 }

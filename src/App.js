@@ -24,8 +24,9 @@ import UnauthPage from './pages/UnauthPage';
 import HomePage from './pages/HomePage';
 import Footer from './components/Nav/Footer';
 import ApplicationsPage from './pages/ApplicationsPage';
+import ApplicationPage from './pages/ApplicationPage';
 import NewApplicationForm from './components/Forms/NewApplicationForm';
-
+import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
 
 function App() {
   return (
@@ -88,8 +89,14 @@ function App() {
           <Route path='/applications' exact>
             <ApplicationsPage />
           </Route>
+          <Route path="/applications/:id">
+            <ApplicationPage />
+          </Route>
           <Route path='/apply'>
             <NewApplicationForm />
+          </Route>
+          <Route path='/ConfirmApplication'>
+          <ConfirmApplicationPage />
           </Route>
           <Route path="/" exact>
             <HomePage />
