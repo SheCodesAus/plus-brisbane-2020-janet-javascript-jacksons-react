@@ -61,7 +61,7 @@ function BecomeHeroForm() {
         postHeroData().then((response) => {
             console.log(response);
             window.localStorage.setItem("username", response.username);
-            history.push("/signin");
+            history.push("/events");
         });
     };
 
@@ -73,6 +73,10 @@ function BecomeHeroForm() {
 
     return (
         <form>
+            <div>
+                <h2>Sign Up To Be A Deep Tech Hero!</h2>
+                <h3>In Deep Tech we value and celebrate all cultures, genders and personalities. Your information will help us to build a tech community where diversity is respected</h3>
+            </div>
             <div>
                 <label htmlFor="username">User Name</label>
                 <input type="text" id="username" onChange={handleHeroChange}/>
@@ -132,7 +136,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="hero_image">Profile Image</label>
-                <input type="url" id="hero_image" onChange={handleHeroChange}/>
+                <input type="url" id="hero_image" placeholder="Please Enter URL" onChange={handleHeroChange}/>
             </div>
             <div>
                 <label htmlFor="linkedin_url">LinkedIn Profile</label>
@@ -242,8 +246,8 @@ function BecomeHeroForm() {
                     <option  value="false">No</option>
                 </select>
             </div>
-            <button type="submit" onClick={handleHeroSubmit}>Submit</button>
             <button type="cancel" onClick={handleHeroCancel}>Cancel</button>
+            <button type="submit" onClick={handleHeroSubmit}>Submit</button>
         </form>
     )
 }
