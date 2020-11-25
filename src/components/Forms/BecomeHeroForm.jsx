@@ -1,41 +1,52 @@
 import React, { useState } from "react";
-import { useHistory, useParams, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Forms.css";
 
 function BecomeHeroForm() {
     const [heroData, setHeroData] = useState({
-        username: "",
-        password:"",
-        first_name: "",
+        username:"",
+        email:"",
+        first_name:"",
         last_name: "",
-        year_of_birth: "",
-        phone: "",
-        email: "",
-        city:"",
-        user_image: "",
-        linkedin_url: "",
-        bio:"",
+        password:"",
+        is_hero:"",
+        is_host:"",
+        rec_newsletter:"",
+        year_of_birth:"",
+        hero_phone:"",
+        hero_location:"",
+        hero_image:"",
+        linkedin_url:"",
+        hero_bio:"",
         gender: "",
-        is_bluecard:"",
-        is_yellowcard: "",
+        pref_pronoun:"",
+        has_bluecard:"",
+        has_yellowcard:"",
         is_virtual_accepted:"",
-        is_paid_preferred: "",
-        is_staff:""
+        is_paid_preferred:"",
+        culture:"",
+        badge_keynote:"",
+        badge_facilitator:"",
+        badge_mentor:"",
+        badge_expert:"",
+        badge_enthusiast:""
     });
 
     const history = useHistory();
 
     const handleHeroChange = (e) => {
+        e.preventDefault();
         const { id, value } = e.target;
-        setHeroData((prevCredentials) => ({
-            ...prevCredentials,
+        setHeroData((prevHeroData) => ({
+            ...prevHeroData,
             [id]: value
         }));
     };
     
-    const postHeroData = async () => {
-        const response = await 
-        fetch(`${process.env.REACT_APP_API_URL}becomehero/`, {
+    const postHeroData = async() => {
+        const response = await fetch(
+        `${process.env.REACT_APP_API_URL}becomehero/`, 
+        {
             method: "post",
             headers: {
                 "Content-Type": "application/json",
@@ -47,29 +58,11 @@ function BecomeHeroForm() {
 
     const handleHeroSubmit = (e) => {
         e.preventDefault();
-        if (heroData.username &&
-            heroData.first_name &&
-            heroData.last_name &&
-            heroData.password
-            // heroData.year_of_birth &&
-            // heroData.phone &&
-            // heroData.email &&
-            // heroData.city &&
-            // heroData.user_image &&
-            // heroData.linkedin_url &&
-            // heroData.bio &&
-            // heroData.gender &&
-            // heroData.is_bluecard &&
-            // heroData.is_yellowcard &&
-            // heroData.is_virtual_accepted &&
-            // heroData.is_paid_preferred &&
-            // heroData.is_staff
-            ) {
-            postHeroData().then((response) => {
-                console.log(response);
-                history.push("/");
-            });
-        }
+        postHeroData().then((response) => {
+            console.log(response);
+            window.localStorage.setItem("username", response.username);
+            history.push("/signin");
+        });
     };
 
     const handleHeroCancel = (e) => {
@@ -85,6 +78,10 @@ function BecomeHeroForm() {
                 <input type="text" id="username" onChange={handleHeroChange}/>
             </div>
             <div>
+                <label htmlFor="email">Email</label>
+                <input type="text" id="email" onChange={handleHeroChange}/>
+            </div>
+            <div>
                 <label htmlFor="first_name">First Name</label>
                 <input type="text" id="first_name" onChange={handleHeroChange}/>
             </div>
@@ -93,74 +90,93 @@ function BecomeHeroForm() {
                 <input type="text" id="last_name" onChange={handleHeroChange}/>
             </div>
             <div>
+                <label htmlFor="password">Password</label>
+                <input type="password" id="password" onChange={handleHeroChange}/>
+            </div>
+            <div>
+                <label htmlFor="is_hero">Would you like to become a hero?</label>
+                <select type="boolean" id="is_hero" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="is_host">Would you like to become a host?</label>
+                <select type="boolean" id="is_host" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="rec_newsletter">Would you like to receive our newsletters?</label>
+                <select type="boolean" id="rec_newsletter" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>          
+            <div>
                 <label htmlFor="year_of_birth">Year Of Birth</label>
-                <input type="number" id="year_of_birth" onChange={handleHeroChange}/>
+                <input type="number" id="year_of_birth" min="1900" onChange={handleHeroChange}/>
             </div>
             <div>
-                <label htmlFor="phone">Phone Number</label>
-                <input type="text" id="phone" onChange={handleHeroChange}/>
+                <label htmlFor="hero_phone">Phone Number</label>
+                <input type="text" id="hero_phone" onChange={handleHeroChange}/>
+            </div>
+            
+            <div>
+                <label htmlFor="hero_location">Location</label>
+                <input type="text" id="hero_location" onChange={handleHeroChange}/>
             </div>
             <div>
-                <label htmlFor="email">Email</label>
-                <input type="text" id="email" onChange={handleHeroChange}/>
-            </div>
-            <div>
-                <label htmlFor="city">City</label>
-                <input type="text" id="city" onChange={handleHeroChange}/>
-            </div>
-            <div>
-                <label htmlFor="user_image">Profile Image</label>
-                <input type="url" id="user_image" onChange={handleHeroChange}/>
+                <label htmlFor="hero_image">Profile Image</label>
+                <input type="url" id="hero_image" onChange={handleHeroChange}/>
             </div>
             <div>
                 <label htmlFor="linkedin_url">LinkedIn Profile</label>
                 <input type="url" id="user_image" onChange={handleHeroChange}/>
             </div>
             <div>
-                <label htmlFor="bio">Bio</label>
-                <input type="text" id="bio" onChange={handleHeroChange}/>
+                <label htmlFor="hero_bio">Bio</label>
+                <input type="text" id="hero_bio" onChange={handleHeroChange}/>
             </div>
             <div>
                 <label htmlFor="gender">I Identify my gender as</label>
-                <select type="number" id="gender" onChange={handleHeroChange}>
+                <select type="text" id="gender" defaultValue="prefer not to say" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="1">Man</option>
-                    <option  value="2">Woman</option>
-                    <option  value="3">Transgender</option>
-                    <option  value="4">Genderqueer</option>
-                    <option  value="5">Agender</option>
-                    <option  value="6">Genderless</option>
-                    <option  value="7">Non-binary</option>
-                    <option  value="8">Cis Man</option>
-                    <option  value="9">Cis Woman</option>
-                    <option  value="10">Trans Man</option>
-                    <option  value="11">Trans Woman</option>
-                    <option  value="12">Third Gender</option>
-                    <option  value="13">Two-Spirit</option>
-                    <option  value="14">Bigender</option>
-                    <option  value="15">Genderfluid</option>
-                    <option  value="16">Prefer Not To Say</option>
+                    <option  value="transgender">Transgender</option>
+                    <option  value="cisgender">Cisgender</option>
+                    <option  value="agender">Agender</option>
+                    <option  value="genderqueer">Genderqueer</option>
+                    <option  value="feminine">Feminine</option>
+                    <option  value="masculine">Masculine</option>
+                    <option  value="prefer not to say">Prefer Not To Say</option>
                 </select>
             </div>
             <div>
-                <label htmlFor="is_staff">Are You Deep Tech Hero's Staff?</label>
-                <select type="boolean" id="is_paid_preferred" onChange={handleHeroChange}>
+                <label htmlFor="pref_pronoun">I would like to be called</label>
+                <select type="text" id="pref_pronoun" defaultValue="prefer not to say" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
+                    <option  value="they/them">They/Them</option>
+                    <option  value="she/her">She/Her</option>
+                    <option  value="he/him">He/Him</option>
+                    <option  value="ze/zem">Ze/Zem</option>
+                    <option  value="prefer not to say">Prefer Not To Say</option>
                 </select>
             </div>
             <div>
-                <label htmlFor="is_bluecard">Do You Hold A Blue Card?</label>
-                <select type="boolean" id="is_bluecard" onChange={handleHeroChange}>
+                <label htmlFor="has_bluecard">Do You Hold A Blue Card?</label>
+                <select type="boolean" id="has_bluecard" defaultValue="false" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
                 </select>
             </div>
             <div>
-                <label htmlFor="is_yellowcard">Do You Hold A Yellow Card?</label>
-                <select type="boolean" id="is_yellowcard" onChange={handleHeroChange}>
+                <label htmlFor="has_yellowcard">Do You Hold A Yellow Card?</label>
+                <select type="boolean" id="has_yellowcard" defaultValue="false" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -168,7 +184,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="is_virtual_accepted">Do You Accept Virtual Event?</label>
-                <select type="boolean" id="is_virtual_accepted" onChange={handleHeroChange}>
+                <select type="boolean" id="is_virtual_accepted" defaultValue="false" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -176,17 +192,56 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="is_paid_preferred">Do You Prefer Paid Events?</label>
-                <select type="boolean" id="is_paid_preferred" onChange={handleHeroChange}>
+                <select type="boolean" id="is_paid_preferred" defaultValue="false" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
                 </select>
             </div>
             <div>
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" onChange={handleHeroChange}/>
+                <label htmlFor="culture">What culture do you belong to?</label>
+                <input type="text" id="culture" onChange={handleHeroChange}/>
             </div>
-
+            <div>
+                <label htmlFor="badge_keynote">Badge KeyNote</label>
+                <select type="boolean" id="badge_keynote" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="badge_facilitator">Badge Facilitator</label>
+                <select type="boolean" id="badge_facilitator" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="badge_mentor">Badge Mentor</label>
+                <select type="boolean" id="badge_mentor" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="badge_expert">Badge Expert</label>
+                <select type="boolean" id="badge_expert" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
+            <div>
+                <label htmlFor="badge_enthusiast">Badge Expert</label>
+                <select type="boolean" id="badge_enthusiast" defaultValue="false" onChange={handleHeroChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
+            </div>
             <button type="submit" onClick={handleHeroSubmit}>Submit</button>
             <button type="cancel" onClick={handleHeroCancel}>Cancel</button>
         </form>
