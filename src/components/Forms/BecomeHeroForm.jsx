@@ -99,7 +99,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="is_hero">Would you like to become a hero?</label>
-                <select type="boolean" id="is_hero" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="is_hero"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -107,7 +107,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="is_host">Would you like to become a host?</label>
-                <select type="boolean" id="is_host" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="is_host"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -115,7 +115,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="rec_newsletter">Would you like to receive our newsletters?</label>
-                <select type="boolean" id="rec_newsletter" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="rec_newsletter"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -140,7 +140,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="linkedin_url">LinkedIn Profile</label>
-                <input type="url" id="user_image" onChange={handleHeroChange}/>
+                <input type="url" id="linkedin_url" onChange={handleHeroChange}/>
             </div>
             <div>
                 <label htmlFor="hero_bio">Bio</label>
@@ -172,7 +172,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="has_bluecard">Do You Hold A Blue Card?</label>
-                <select type="boolean" id="has_bluecard" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="has_bluecard"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -180,7 +180,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="has_yellowcard">Do You Hold A Yellow Card?</label>
-                <select type="boolean" id="has_yellowcard" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="has_yellowcard"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -188,7 +188,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="is_virtual_accepted">Do You Accept Virtual Event?</label>
-                <select type="boolean" id="is_virtual_accepted" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="is_virtual_accepted"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -196,7 +196,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="is_paid_preferred">Do You Prefer Paid Events?</label>
-                <select type="boolean" id="is_paid_preferred" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="is_paid_preferred"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -208,7 +208,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="badge_keynote">Badge KeyNote</label>
-                <select type="boolean" id="badge_keynote" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="badge_keynote"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -216,7 +216,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="badge_facilitator">Badge Facilitator</label>
-                <select type="boolean" id="badge_facilitator" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="badge_facilitator"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -224,7 +224,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="badge_mentor">Badge Mentor</label>
-                <select type="boolean" id="badge_mentor" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="badge_mentor"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
@@ -232,15 +232,15 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="badge_expert">Badge Expert</label>
-                <select type="boolean" id="badge_expert" defaultValue="false" onChange={handleHeroChange}>
+                <select type="boolean" id="badge_expert"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
                 </select>
             </div>
             <div>
-                <label htmlFor="badge_enthusiast">Badge Expert</label>
-                <select type="boolean" id="badge_enthusiast" defaultValue="false" onChange={handleHeroChange}>
+                <label htmlFor="badge_enthusiast">Badge Enthusiast</label>
+                <select type="boolean" id="badge_enthusiast"  onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="true">Yes</option>
                     <option  value="false">No</option>
