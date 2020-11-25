@@ -45,7 +45,7 @@ function BecomeHeroForm() {
     
     const postHeroData = async() => {
         const response = await fetch(
-        `${process.env.REACT_APP_API_URL}becomehero/`, 
+        `${process.env.REACT_APP_API_URL}users/becomehero/`, 
         {
             method: "post",
             headers: {
@@ -61,7 +61,7 @@ function BecomeHeroForm() {
         postHeroData().then((response) => {
             console.log(response);
             window.localStorage.setItem("username", response.username);
-            history.push("/events");
+            history.push("/signin");
         });
     };
 
