@@ -68,7 +68,7 @@ function BecomeHeroForm() {
         <form className="create-form">
             <div>
                 <h2>Sign Up To Be A Deep Tech Hero!</h2>
-                <h3>In Deep Tech we value and celebrate all cultures, genders and personalities. Your information will help us to build a tech community where diversity is respected</h3>
+                <p>In Deep Tech we value and celebrate all cultures, genders and personalities. Your information will help us to build a tech community where diversity is respected</p>
             </div>
             <div>
                 <label htmlFor="username">User Name</label>
@@ -154,7 +154,7 @@ function BecomeHeroForm() {
                 <label htmlFor="has_bluecard">
                     <input type="radio" id="has_bluecard" name="has_bluecard" value="true" onChange={handleHeroChange}/> Yes
                 </label>
-                <label htmlFor="rec_newsletter">
+                <label htmlFor="has_bluecard">
                     <input type="radio" id="has_bluecard" name="has_bluecard" value="false" onChange={handleHeroChange}/> No
                 </label>
             </div> 
@@ -164,7 +164,7 @@ function BecomeHeroForm() {
                 <label htmlFor="has_yellowcard">
                     <input type="radio" id="has_yellowcard" name="has_yellowcard" value="true" onChange={handleHeroChange}/> Yes
                 </label>
-                <label htmlFor="rec_newsletter">
+                <label htmlFor="has_yellowcard">
                     <input type="radio" id="has_yellowcard" name="has_yellowcard" value="false" onChange={handleHeroChange}/> No
                 </label>
             </div>
@@ -174,7 +174,7 @@ function BecomeHeroForm() {
                 <label htmlFor="is_virtual_accepted">
                     <input type="radio" id="is_virtual_accepted" name="is_virtual_accepted" value="true" onChange={handleHeroChange}/> Yes
                 </label>
-                <label htmlFor="rec_newsletter">
+                <label htmlFor="is_virtual_accepted">
                     <input type="radio" id="is_virtual_accepted" name="is_virtual_accepted" value="false" onChange={handleHeroChange}/> No
                 </label>
             </div>
@@ -183,7 +183,7 @@ function BecomeHeroForm() {
                 <label htmlFor="is_paid_preferred">
                     <input type="radio" id="is_paid_preferred" name="is_paid_preferred" value="true" onChange={handleHeroChange}/> Yes
                 </label>
-                <label htmlFor="rec_newsletter">
+                <label htmlFor="is_paid_preferred">
                     <input type="radio" id="is_paid_preferred" name="is_paid_preferred" value="false" onChange={handleHeroChange}/> No
                 </label>
             </div>

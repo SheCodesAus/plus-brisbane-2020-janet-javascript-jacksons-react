@@ -58,8 +58,7 @@ const BecomeHostForm = (props) => {
         <form className="create-form">
             <div>
                 <h1>Become a Host</h1>
-                <p>Do you organise events related to Deep Tech?</p>
-                <p>You need to be signed in to become a Host. Click here to <Link to="/signin">sign in</Link></p>
+                <p>Do you organise events related to Deep Tech? Become a Host to list your events and be found by diverse Heroes.</p>
             </div>
 
             <div>
@@ -83,6 +82,7 @@ const BecomeHostForm = (props) => {
                 <input type="password" id="password" onChange={handleHostChange}/>
             </div>
             <div>
+                <p>Do you want to receive our newsletter?</p>
                 <label htmlFor="rec_newsletter">
                     <input type="radio" id="rec_newsletter" name="rec_newsletter" value="true" onChange={handleHostChange}/> Yes
                 </label>
