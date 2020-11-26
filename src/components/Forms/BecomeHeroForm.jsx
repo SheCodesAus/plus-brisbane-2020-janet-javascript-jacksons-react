@@ -9,8 +9,6 @@ function BecomeHeroForm() {
         first_name:"",
         last_name: "",
         password:"",
-        is_hero:"",
-        is_host:"",
         rec_newsletter:"",
         year_of_birth:"",
         hero_phone:"",
@@ -24,12 +22,7 @@ function BecomeHeroForm() {
         has_yellowcard:"",
         is_virtual_accepted:"",
         is_paid_preferred:"",
-        culture:"",
-        badge_keynote:"",
-        badge_facilitator:"",
-        badge_mentor:"",
-        badge_expert:"",
-        badge_enthusiast:""
+        culture:""
     });
 
     const history = useHistory();
@@ -72,7 +65,7 @@ function BecomeHeroForm() {
     };
 
     return (
-        <form>
+        <form className="create-form">
             <div>
                 <h2>Sign Up To Be A Deep Tech Hero!</h2>
                 <h3>In Deep Tech we value and celebrate all cultures, genders and personalities. Your information will help us to build a tech community where diversity is respected</h3>
@@ -98,29 +91,14 @@ function BecomeHeroForm() {
                 <input type="password" id="password" onChange={handleHeroChange}/>
             </div>
             <div>
-                <label htmlFor="is_hero">Would you like to become a hero?</label>
-                <select type="boolean" id="is_hero"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="is_host">Would you like to become a host?</label>
-                <select type="boolean" id="is_host"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="rec_newsletter">Would you like to receive our newsletters?</label>
-                <select type="boolean" id="rec_newsletter"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>          
+                <p>Do you want to receive our newsletter?</p>
+                <label htmlFor="rec_newsletter">
+                    <input type="radio" id="rec_newsletter" name="rec_newsletter" value="true" onChange={handleHeroChange}/> Yes
+                </label>
+                <label htmlFor="rec_newsletter">
+                    <input type="radio" id="rec_newsletter" name="rec_newsletter" value="false" onChange={handleHeroChange}/> No
+                </label>
+            </div>       
             <div>
                 <label htmlFor="year_of_birth">Year Of Birth</label>
                 <input type="number" id="year_of_birth" min="1900" onChange={handleHeroChange}/>
@@ -148,7 +126,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="gender">I Identify my gender as</label>
-                <select type="text" id="gender" defaultValue="prefer not to say" onChange={handleHeroChange}>
+                <select type="text" id="gender" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="transgender">Transgender</option>
                     <option  value="cisgender">Cisgender</option>
@@ -161,7 +139,7 @@ function BecomeHeroForm() {
             </div>
             <div>
                 <label htmlFor="pref_pronoun">I would like to be called</label>
-                <select type="text" id="pref_pronoun" defaultValue="prefer not to say" onChange={handleHeroChange}>
+                <select type="text" id="pref_pronoun" onChange={handleHeroChange}>
                     <option  value="" disabled selected>--Select an option--</option>
                     <option  value="they/them">They/Them</option>
                     <option  value="she/her">She/Her</option>
@@ -170,81 +148,49 @@ function BecomeHeroForm() {
                     <option  value="prefer not to say">Prefer Not To Say</option>
                 </select>
             </div>
+    
             <div>
-                <label htmlFor="has_bluecard">Do You Hold A Blue Card?</label>
-                <select type="boolean" id="has_bluecard"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
+                <p>Do You Hold A Blue Card?</p>
+                <label htmlFor="has_bluecard">
+                    <input type="radio" id="has_bluecard" name="has_bluecard" value="true" onChange={handleHeroChange}/> Yes
+                </label>
+                <label htmlFor="rec_newsletter">
+                    <input type="radio" id="has_bluecard" name="has_bluecard" value="false" onChange={handleHeroChange}/> No
+                </label>
+            </div> 
+            
+            <div>
+                <p>Do You Hold A Yellow Card?</p>
+                <label htmlFor="has_yellowcard">
+                    <input type="radio" id="has_yellowcard" name="has_yellowcard" value="true" onChange={handleHeroChange}/> Yes
+                </label>
+                <label htmlFor="rec_newsletter">
+                    <input type="radio" id="has_yellowcard" name="has_yellowcard" value="false" onChange={handleHeroChange}/> No
+                </label>
+            </div>
+
+            <div>
+                <p>Do You Accept Virtual Event?</p>
+                <label htmlFor="is_virtual_accepted">
+                    <input type="radio" id="is_virtual_accepted" name="is_virtual_accepted" value="true" onChange={handleHeroChange}/> Yes
+                </label>
+                <label htmlFor="rec_newsletter">
+                    <input type="radio" id="is_virtual_accepted" name="is_virtual_accepted" value="false" onChange={handleHeroChange}/> No
+                </label>
             </div>
             <div>
-                <label htmlFor="has_yellowcard">Do You Hold A Yellow Card?</label>
-                <select type="boolean" id="has_yellowcard"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
+                <p>Do You Prefer Paid Events?</p>
+                <label htmlFor="is_paid_preferred">
+                    <input type="radio" id="is_paid_preferred" name="is_paid_preferred" value="true" onChange={handleHeroChange}/> Yes
+                </label>
+                <label htmlFor="rec_newsletter">
+                    <input type="radio" id="is_paid_preferred" name="is_paid_preferred" value="false" onChange={handleHeroChange}/> No
+                </label>
             </div>
-            <div>
-                <label htmlFor="is_virtual_accepted">Do You Accept Virtual Event?</label>
-                <select type="boolean" id="is_virtual_accepted"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="is_paid_preferred">Do You Prefer Paid Events?</label>
-                <select type="boolean" id="is_paid_preferred"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
+
             <div>
                 <label htmlFor="culture">What culture do you belong to?</label>
                 <input type="text" id="culture" onChange={handleHeroChange}/>
-            </div>
-            <div>
-                <label htmlFor="badge_keynote">Badge KeyNote</label>
-                <select type="boolean" id="badge_keynote"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="badge_facilitator">Badge Facilitator</label>
-                <select type="boolean" id="badge_facilitator"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="badge_mentor">Badge Mentor</label>
-                <select type="boolean" id="badge_mentor"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="badge_expert">Badge Expert</label>
-                <select type="boolean" id="badge_expert"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
-            <div>
-                <label htmlFor="badge_enthusiast">Badge Enthusiast</label>
-                <select type="boolean" id="badge_enthusiast"  onChange={handleHeroChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
             </div>
             <button type="cancel" onClick={handleHeroCancel}>Cancel</button>
             <button type="submit" onClick={handleHeroSubmit}>Submit</button>
