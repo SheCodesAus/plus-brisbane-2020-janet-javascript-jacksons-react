@@ -8,7 +8,7 @@ function HomePage() {
         <div id="home-page">
 
             <div className="cover">
-                <img src="https://res.cloudinary.com/dikrdv4qy/image/upload/v1606439814/Background_bdvap8.png"></img>
+                <img src="https://res.cloudinary.com/dikrdv4qy/image/upload/v1606439814/Background_bdvap8.png" alt=""></img>
             </div>
 
             <div className="section1">

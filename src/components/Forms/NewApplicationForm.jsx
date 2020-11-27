@@ -13,6 +13,7 @@ function NewApplicationForm() {
         skills_expert: false,
         skills_enthusiast: false,
     });
+   
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -58,7 +59,7 @@ function NewApplicationForm() {
                 <p>Not a Hero yet? <Link to="/signup">Sign Up</Link></p>
 
                 <p>Which Event do you want to be a Hero at?</p>
-                <label htmlFor='event_id'>Event Number:</label>
+                <label htmlFor='event_id'>Event Number: </label>
                 <input
                     type='number'
                     id='event_id'
