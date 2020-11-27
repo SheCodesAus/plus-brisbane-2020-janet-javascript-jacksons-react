@@ -24,7 +24,7 @@ import UsersPage from './pages/UsersPage';
 // import HeroPage from './pages/HeroPage';
 import HeroesPage from './pages/HeroesPage';
 // import HostPage from './pages/HostPage';
-// import HostsPage from './pages/HostsPage';
+import HostsPage from './pages/HostsPage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import SignOutPage from './pages/SignOutPage';
@@ -106,9 +106,9 @@ function App() {
           {/* <Route path="/host/:username">
             <HostPage />
           </Route> */}
-          {/* <Route path="/hosts">
+          <Route path="/hosts">
             <HostsPage />
-          </Route> */}
+          </Route>
           <Route path="/becomehero">
             <BecomeHeroPage />
           </Route>
