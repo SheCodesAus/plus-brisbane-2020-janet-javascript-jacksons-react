@@ -23,7 +23,7 @@ function ApplicationPage() {
     return (
         <div>
             <h1>Application {applicationData.id}</h1>
-            <h3>reason to apply: { applicationData.reason_apply }</h3>
+            <h3>Tell us why you would like to be a Hero for this Event:{ applicationData.reason_apply }</h3>
             <h3>Application for event: { applicationData.event }</h3>
         </div>
     );

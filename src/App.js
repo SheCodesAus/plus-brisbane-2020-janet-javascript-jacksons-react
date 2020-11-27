@@ -43,9 +43,10 @@ import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <Nav />
-
+      </div>
+      <div>
         <Switch>
           <Route path="/about">
             <AboutPage />
@@ -140,7 +141,7 @@ function App() {
           <Route path='/apply'>
             <NewApplicationForm />
           </Route>
-          <Route path='/ConfirmApplication'>
+          <Route path='/confirmapplication'>
           <ConfirmApplicationPage />
           </Route>
           <Route path="/" exact>

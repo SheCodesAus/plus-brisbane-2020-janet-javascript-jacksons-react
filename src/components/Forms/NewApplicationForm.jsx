@@ -46,7 +46,7 @@ function NewApplicationForm() {
         e.preventDefault();
         postData().then((response) => {
             window.localStorage.setItem('application', response.application);
-            history.push('/ConfirmApplication');
+            history.push('/confirmapplication');
         });
     };
 
@@ -112,7 +112,7 @@ function NewApplicationForm() {
                         onChange={handleChange}
                     />
                     <br/>
-                        <label htmlFor='reason_apply'>Reason to Apply</label>
+                        <label htmlFor='reason_apply'>Tell us why you would like to be a Hero for this Event:</label>
                         <input
                             type='text'
                             id='reason_apply'
