@@ -22,7 +22,7 @@ import HugeEventsPage from './pages/HugeEventsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
 // import HeroPage from './pages/HeroPage';
-// import HeroesPage from './pages/HeroesPage';
+import HeroesPage from './pages/HeroesPage';
 // import HostPage from './pages/HostPage';
 // import HostsPage from './pages/HostsPage';
 import SignUpPage from './pages/SignUpPage';
@@ -100,9 +100,9 @@ function App() {
           {/* <Route path="/hero/:username">
             <HeroPage />
           </Route> */}
-          {/* <Route path="/heroes">
+          <Route path="/heroes">
             <HeroesPage />
-          </Route> */}
+          </Route>
           {/* <Route path="/host/:username">
             <HostPage />
           </Route> */}
