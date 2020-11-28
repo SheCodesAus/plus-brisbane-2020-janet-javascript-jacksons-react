@@ -1,11 +1,11 @@
-* {
+/* * {
     box-sizing: border-box;
 }
 
-/* img {
+img {
     width: 100%;
     height: auto;
-} */
+}
 
 h1 {
     color: #171515;
@@ -22,9 +22,9 @@ h3 {
     padding: 7px 14px;
     text-align: center;
     text-decoration: none;
-}
+} */
 
-p {
+/* p {
     font-family: Tahoma, sans-serif;
     font-size: medium;
 }
@@ -51,9 +51,9 @@ button {
     font-size: medium;
     border-radius: 3px;
     transition-duration: 0.2s;
-}
+} */
 
-button:hover {
+/* button:hover {
     background-color: #7E7C73;
     color: #171515;
     border: 3px solid #171515;
@@ -71,4 +71,4 @@ button:hover {
     grid-template-columns: repeat(auto-fit, minmax(28%,1fr));
     column-gap: 3%;
     row-gap: 15px;
-}
+} */
