@@ -6,7 +6,6 @@ function UserPage() {
     const { id } = useParams();
 
     useEffect(() => {
-        // const token = window.localStorage.getItem("token")
 
         fetch(`${process.env.REACT_APP_API_URL}users/${id}`, {
             headers: {
@@ -25,7 +24,8 @@ function UserPage() {
     return (
         <div>
             <p>{ userData.username }</p>
-            <p>Become a <Link to="/newhero">Hero</Link></p>
+            <p>Become a <Link to="/becomehero">Hero</Link></p>
+            <p>Become a <Link to="/becomehost">Host</Link></p>
         </div>
     );
 }
