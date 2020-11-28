@@ -3,16 +3,19 @@ import { Link, useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewApplicationForm() {
-    
+
+    const history = useHistory();
+    const eventid = window.localStorage.getItem("event")
+
     const [application, setNewApplication] = useState({
-        event_id: "",
+        event_id: eventid,
         reason_apply: "",
-        event: "",
         apply_keynote: false,
         apply_facilitator: false,
         apply_mentor: false,
         apply_expert: false,
         apply_enthusiast: false,
+        event: eventid,
     });
 
     const handleChange = (e) => {
@@ -24,12 +27,9 @@ function NewApplicationForm() {
         }));
     }
 
-    const history = useHistory();
-
+    
     const postData = async () => {
         const token = window.localStorage.getItem("token")
-        // const event_id = window.localStorage.getItem("event_id");
-
 
         const response = await fetch (
             `${process.env.REACT_APP_API_URL}events/apply/`,
@@ -58,16 +58,9 @@ function NewApplicationForm() {
                 <h1>Apply for an Event</h1>
                 <p>You will need to be signed in as a Hero to be able to apply for an Event.</p>
                 <p>Already a Hero? <Link to="/signin">Sign In</Link></p>
-                <p>Not a Hero yet? <Link to="/signup">Sign Up</Link></p>
+                <p>Not a Hero yet? <Link to="/becomehero">Become a Hero</Link></p>
 
-                <p>Which Event do you want to be a Hero at?</p>
-                <label htmlFor='event_id'>Event Number: </label>
-                <input
-                    type='number'
-                    id='event_id'
-                    required
-                    onChange={handleChange}
-                />
+                <br/>
                 <br/>
                 <p>What type of skills do you like to volunteer for the event?</p>
                     <label htmlFor='apply_keynote'>Keynote Speaker</label>
@@ -79,7 +72,7 @@ function NewApplicationForm() {
                         onChange={handleChange}
                     />
                     <br/>
-                    <label htmlFor='skills_facilitator'>Workshop Facilitator</label>
+                    <label htmlFor='apply_facilitator'>Workshop Facilitator</label>
                     &nbsp;
                     <input
                         type='checkbox'
@@ -88,7 +81,7 @@ function NewApplicationForm() {
                         onChange={handleChange}
                     />
                     <br/>
-                    <label htmlFor='skills_mentor'>Supportive Mentor</label>
+                    <label htmlFor='apply_mentor'>Supportive Mentor</label>
                     &nbsp;
                     <input
                         type='checkbox'
@@ -101,7 +94,7 @@ function NewApplicationForm() {
                     &nbsp;
                     <input
                         type='checkbox'
-                        id='skills_expert'
+                        id='apply_expert'
                         value='true'
                         onChange={handleChange}
                     />
@@ -122,11 +115,16 @@ function NewApplicationForm() {
                             required
                             onChange={handleChange}
                         />
-                <button
-                    type='submit'
-                    onClick={ handleSubmit }>
-                    Apply
-                </button>
+           
+                
+                <br/>
+                <br/>
+                <h3>Check the details below are correct, then click Submit.</h3>
+                <p>Event number: { application.event_id }</p>
+                <p>Your reason for applying to be a Hero at this Event: { application.reason_apply }</p>
+                <br/>
+                <p>Are you ready to submit your application?</p>
+                <button type='submit' onClick={ handleSubmit }> Apply </button>
 
             </form>
     );

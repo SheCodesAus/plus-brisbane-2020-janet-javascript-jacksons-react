@@ -21,10 +21,10 @@ import VeryLargeEventsPage from './pages/VeryLargeEventsPage';
 import HugeEventsPage from './pages/HugeEventsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
-// import HeroPage from './pages/HeroPage';
-// import HeroesPage from './pages/HeroesPage';
-// import HostPage from './pages/HostPage';
-// import HostsPage from './pages/HostsPage';
+import HeroPage from './pages/HeroPage';
+import HeroesPage from './pages/HeroesPage';
+import HostPage from './pages/HostPage';
+import HostsPage from './pages/HostsPage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
 import SignOutPage from './pages/SignOutPage';
@@ -99,18 +99,18 @@ function App() {
           <Route path="/users">
             <UsersPage />
           </Route>
-          {/* <Route path="/hero/:username">
+          <Route path="/hero/:id">
             <HeroPage />
-          </Route> */}
-          {/* <Route path="/heroes">
+          </Route>
+          <Route path="/heroes">
             <HeroesPage />
-          </Route> */}
-          {/* <Route path="/host/:username">
+          </Route>
+          <Route path="/host/:id">
             <HostPage />
-          </Route> */}
-          {/* <Route path="/hosts">
+          </Route>
+          <Route path="/hosts">
             <HostsPage />
-          </Route> */}
+          </Route>
           <Route path="/becomehero">
             <BecomeHeroPage />
           </Route>
