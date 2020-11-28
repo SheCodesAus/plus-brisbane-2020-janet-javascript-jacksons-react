@@ -21,9 +21,9 @@ import VeryLargeEventsPage from './pages/VeryLargeEventsPage';
 import HugeEventsPage from './pages/HugeEventsPage';
 import UserPage from './pages/UserPage';
 import UsersPage from './pages/UsersPage';
-// import HeroPage from './pages/HeroPage';
+import HeroPage from './pages/HeroPage';
 import HeroesPage from './pages/HeroesPage';
-// import HostPage from './pages/HostPage';
+import HostPage from './pages/HostPage';
 import HostsPage from './pages/HostsPage';
 import SignUpPage from './pages/SignUpPage';
 import SignInPage from './pages/SignInPage';
@@ -97,15 +97,15 @@ function App() {
           <Route path="/users">
             <UsersPage />
           </Route>
-          {/* <Route path="/hero/:username">
+          <Route path="/hero/:id">
             <HeroPage />
-          </Route> */}
+          </Route>
           <Route path="/heroes">
             <HeroesPage />
           </Route>
-          {/* <Route path="/host/:username">
+          <Route path="/host/:id">
             <HostPage />
-          </Route> */}
+          </Route>
           <Route path="/hosts">
             <HostsPage />
           </Route>
