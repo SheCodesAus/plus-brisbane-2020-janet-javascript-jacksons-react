@@ -29,7 +29,7 @@ function HomePage() {
                 {/* <h2>How Does it Work?</h2> */}
                 <div className="hero">
                     <h2>Are you a Hero?</h2>
-                    <Link to="/"><img className= "Hero-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350478/Deep%20Tech%20Heroes/DTH_18_kw6kn9.png" alt=""></img></Link>
+                    <Link to="/"><img className= "Hero-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_12_qg3kc9.png" alt=""></img></Link>
 
                     <p>Are you excited about the future with AI Or hoping to build the next great thing in robotics? 
                         Are you confident showing those who are new the ropes of your particular expertise?
@@ -42,7 +42,7 @@ function HomePage() {
 
                 <div className="host">
                     <h2>Are you a Host?</h2>
-                    <Link to="/"><img className= "Host-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_12_qg3kc9.png" alt=""></img></Link>
+                    <Link to="/"><img className= "Host-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_7_h40rzg.png" alt=""></img></Link>
 
                     <p>Are you an organisation that is looking to create and innovate? Do you need people with a specific focus in deep tech? 
                         Have a look around. Advertise your event and see the available Heroes. If you find a Hero who you think would be a great addition to your event make contact and find out what you have in common!
