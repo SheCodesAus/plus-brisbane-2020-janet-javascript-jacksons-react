@@ -3,17 +3,17 @@ import { Link, useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewApplicationForm() {
+    
     const [application, setNewApplication] = useState({
         event_id: "",
         reason_apply: "",
         event: "",
-        skills_keynote: false,
-        skills_facilitator: false,
-        skills_mentor: false,
-        skills_expert: false,
-        skills_enthusiast: false,
+        apply_keynote: false,
+        apply_facilitator: false,
+        apply_mentor: false,
+        apply_expert: false,
+        apply_enthusiast: false,
     });
-   
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -28,6 +28,8 @@ function NewApplicationForm() {
 
     const postData = async () => {
         const token = window.localStorage.getItem("token")
+        // const event_id = window.localStorage.getItem("event_id");
+
 
         const response = await fetch (
             `${process.env.REACT_APP_API_URL}events/apply/`,
@@ -46,8 +48,8 @@ function NewApplicationForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         postData().then((response) => {
-            window.localStorage.setItem('application', response.application);
-            history.push('/confirmapplication');
+            window.localStorage.setItem("application", response.application);
+            history.push("/confirmapplication");
         });
     };
 
@@ -68,11 +70,11 @@ function NewApplicationForm() {
                 />
                 <br/>
                 <p>What type of skills do you like to volunteer for the event?</p>
-                    <label htmlFor='skills_keynote'>Keynote Speaker</label>
+                    <label htmlFor='apply_keynote'>Keynote Speaker</label>
                     &nbsp;
                     <input
                         type='checkbox'
-                        id='skills_keynote'
+                        id='apply_keynote'
                         value='true'
                         onChange={handleChange}
                     />
@@ -81,7 +83,7 @@ function NewApplicationForm() {
                     &nbsp;
                     <input
                         type='checkbox'
-                        id='skills_facilitator'
+                        id='apply_facilitator'
                         value='true'
                         onChange={handleChange}
                     />
@@ -90,12 +92,12 @@ function NewApplicationForm() {
                     &nbsp;
                     <input
                         type='checkbox'
-                        id='skills_mentor'
+                        id='apply_mentor'
                         value='true'
                         onChange={handleChange}
                     />
                     <br/>
-                    <label htmlFor='skills_expert'>Topic Expert</label>
+                    <label htmlFor='apply_expert'>Topic Expert</label>
                     &nbsp;
                     <input
                         type='checkbox'
@@ -104,11 +106,11 @@ function NewApplicationForm() {
                         onChange={handleChange}
                     />
                     <br/>
-                    <label htmlFor='skills_enthusiast'>Deep Tech Enthusiast</label>
+                    <label htmlFor='apply_enthusiast'>Deep Tech Enthusiast</label>
                     &nbsp;
                     <input
                         type='checkbox'
-                        id='skills_enthusiast'
+                        id='apply_enthusiast'
                         value='true'
                         onChange={handleChange}
                     />

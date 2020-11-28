@@ -16,6 +16,8 @@ function EventPage() {
         })
         .then((data) => {
             setEventData(data);
+            window.localStorage.setItem("event", data.eventData.event_id);
+
         });
     }, [id]);
 
