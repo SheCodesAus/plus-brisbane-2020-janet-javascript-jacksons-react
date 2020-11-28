@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import IsAnon from "../components/Categories/IsAnon";
+import IsAccepted from "../components/Categories/IsAccepted";
+import IsAssessed from '../components/Categories/IsAssessed';
 
 function EventPage() {
     const [eventData, setEventData] = useState({ events: [], applications: [] });
@@ -52,15 +55,18 @@ function EventPage() {
                     {eventData.applications.map((applicationData, key) => {
                         return (
                             <li key={key}>
-                                {/* <IsAccepted applicationData={ applicationData }/> */}
-                                <p>Hero: { applicationData.owner } </p>
-                                <p>Reason: { applicationData.reason_apply }</p>
-                                <p>Status: { applicationData.is_accepted }</p>
+                                <IsAnon applicationData={ applicationData }/>
+                                <p>Application: { applicationData.reason_apply }</p>
+                                <IsAssessed applicationData={ applicationData } />
+                                <IsAccepted applicationData={ applicationData } />
+                                <br/>
                             </li>
                         );
                     })}
                 </ul>
             </div>
+            <br/>
+            <br/>
             <div>
               <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
             </div>

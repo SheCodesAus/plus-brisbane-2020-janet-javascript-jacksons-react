@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function HostPage() {
     const [hostData, setHostData] = useState({
@@ -34,6 +34,10 @@ function HostPage() {
             <div className='host-details'>
                 <p>Organisation Name: {hostData.organisation_name}</p>
                 <p>Organisation Phone: { hostData.host_phone }</p>
+            </div>
+            <div>
+                <p>Become a <Link to="/becomehero">Hero</Link></p>
+                <p>Become a <Link to="/becomehost">Host</Link></p>
             </div>
         </div>
     );
