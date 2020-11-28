@@ -3,10 +3,14 @@ import { Link, useHistory } from 'react-router-dom';
 import './Forms.css';
 
 function NewApplicationForm() {
+
+    const history = useHistory();
+    const eventid = window.localStorage.getItem("event")
+
     const [application, setNewApplication] = useState({
-        event_id: "",
+        event_id: eventid,
         reason_apply: "",
-        event: "",
+        event: eventid,
     });
 
     const handleChange = (e) => {
@@ -18,8 +22,7 @@ function NewApplicationForm() {
         }));
     }
 
-    const history = useHistory();
-
+    
     const postData = async () => {
         const token = window.localStorage.getItem("token")
 
@@ -53,15 +56,7 @@ function NewApplicationForm() {
                 <p>Already a Hero? <Link to="/signin">Sign In</Link></p>
                 <p>Not a Hero yet? <Link to="/signup">Sign Up</Link></p>
 
-                <p>Which Event do you want to be a Hero at?</p>
-                <label htmlFor='event_id'>Event Number:</label>
-                <input
-                    type='number'
-                    id='event_id'
-                    required
-                    onChange={handleChange}
-                />
-                <br/>
+            
                 <label htmlFor='reason_apply'>Reason to Apply</label>
                 <input
                     type='text'
@@ -70,14 +65,7 @@ function NewApplicationForm() {
                     onChange={handleChange}
                 />
                 <br/>
-                <label htmlFor='event_id'>Confirm Event Number:</label>
-                <input
-                    type='number'
-                    id='event'
-                    required
-                    onChange={handleChange}
-                />
-                <br/>
+                
                 <br/>
                 <br/>
                 <h3>Check the details below are correct, then click Submit.</h3>

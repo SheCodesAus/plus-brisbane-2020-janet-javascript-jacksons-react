@@ -16,8 +16,11 @@ function EventPage() {
         })
         .then((data) => {
             setEventData(data);
+
         });
     }, [id]);
+
+    window.localStorage.setItem("event", eventData.id);
 
     return (
         <div>
