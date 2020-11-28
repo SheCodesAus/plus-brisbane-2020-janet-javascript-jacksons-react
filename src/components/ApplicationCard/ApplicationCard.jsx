@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import IsAccepted from '../Categories/IsAccepted';
+import IsAccepted from '../Filters/Application/IsAccepted';
 import "./ApplicationCard.css";
 
 function ApplicationCard(props) {

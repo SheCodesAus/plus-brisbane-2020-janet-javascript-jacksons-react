@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import IsAnon from "../components/Categories/IsAnon";
-import IsAccepted from "../components/Categories/IsAccepted";
-import IsAssessed from '../components/Categories/IsAssessed';
+import IsAnon from "../components/Filters/Application/IsAnon";
+import IsAccepted from "../components/Filters/Application/IsAccepted";
+import IsAssessed from '../components/Filters/Application/IsAssessed';
 
 function EventPage() {
-    const [eventData, setEventData] = useState({ events: [], applications: [] });
+    const [eventData, setEventData] = useState({ events: [], applications: [], reviewevents: [] });
     const { id } = useParams();
 
     useEffect(() => {
@@ -23,6 +23,7 @@ function EventPage() {
     }, [id]);
 
     window.localStorage.setItem("event", eventData.id);
+    window.localStorage.setItem("host", eventData.owner);
 
     return (
         <div>
@@ -65,6 +66,20 @@ function EventPage() {
                     })}
                 </ul>
             </div>
+            <div>
+            <h3>Event Reviews</h3>
+                {/* <ul>
+                    {eventData.reviewevent.map((revieweventData, key) => {
+                        return (
+                            <li key={key}>
+                                <p>{ revieweventData.comment }</p>
+                                <br/>
+                            </li>
+                        );
+                    })}
+                </ul> */}
+            </div>
+
             <br/>
             <br/>
             <div>
