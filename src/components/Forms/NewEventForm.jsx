@@ -7,6 +7,9 @@ function NewEventForm() {
         event_name: "",
         event_description: "",
         event_location: "",
+        event_date: "",
+        event_time: "",
+        event_ticket: "",
         skills_keynote: false,
         skills_facilitator: false,
         skills_mentor: false,
@@ -61,7 +64,7 @@ function NewEventForm() {
             <p>Include instructions for how to prepare new event submission here.</p>
             <p>You will need to be signed in as a Host to be able to create an Event.</p>
             <p>Already a Host? <Link to="/signin">Sign In</Link></p>
-            <p>Not a Host yet? <Link to="/signup">Sign Up</Link></p>
+            <p>Not a Host yet? <Link to="/becomehost">Sign Up</Link></p>
 
             <label htmlFor='event_name'>Event Name</label>
             <input
@@ -83,6 +86,27 @@ function NewEventForm() {
             <input
                 type='text'
                 id='event_location'
+                onChange={handleChange}
+            />
+            <br/>
+            <label htmlFor='event_date'>Event Date</label>
+            <input
+                type='date'
+                id='event_date'
+                onChange={handleChange}
+            />
+            <br/>
+            <label htmlFor='event_time'>Event Start Time</label>
+            <input
+                type='time'
+                id='event_time'
+                onChange={handleChange}
+            />
+            <br/>
+            <label>Event Ticket Link</label>
+            <input
+                type='url'
+                id='event_ticket'
                 onChange={handleChange}
             />
             <br/>
@@ -144,7 +168,7 @@ function NewEventForm() {
             <br/>
             
             <p>Is there a budget allocation to pay Heroes for their involvement?</p>
-            <label htmlFor='is_paid'>Payment Available</label>
+            <label htmlFor='is_paid'>Payment Negotiable</label>
             &nbsp;
             <input
                 type='radio'
