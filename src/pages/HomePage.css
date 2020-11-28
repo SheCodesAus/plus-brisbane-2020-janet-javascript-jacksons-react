@@ -124,12 +124,13 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #171515;
-    color: #171515;
+    border: 2px solid #043c6c;
+    color: #043c6c;
     /* padding: 14px 28px; */
     text-align: center;
     text-decoration: none;
     font-size: medium;
+    font-weight: bold;
     border-radius: 3px;
     transition-duration: 0.2s;
 
@@ -140,8 +141,8 @@ button {
 
 button:hover {
     background-color: #7E7C73;
-    color: #171515;
-    border: 3px solid #171515;
+    color: #043c6c;
+    border: 3px solid #043c6c;
 }
 
 @media (max-width: 768px) {
@@ -155,9 +156,16 @@ button:hover {
     padding-top: 50px;
     margin-left: -100px;
     margin-right: -100px;
-
-
     }
+
+    .section2 {
+        width: 100%; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center;
+        padding: 0px 70px 10px 70px; 
+    } 
 
 
 }
