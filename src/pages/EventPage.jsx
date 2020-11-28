@@ -16,7 +16,6 @@ function EventPage() {
         })
         .then((data) => {
             setEventData(data);
-
         });
     }, [id]);
 
@@ -32,7 +31,8 @@ function EventPage() {
             </div>
             <div className='event-description'>
                 <h5>Location: { eventData.event_location }</h5>
-                <p>Date: </p>
+                <p>Date: { eventData.event_date } </p>
+                <p>Time: { eventData.event_time } </p>
                 <p>Details: { eventData.event_description }</p>
                 <p>Estimated event size: { eventData.event_size }</p>
                 <p>The Event Host is seeking Heroes for the following opportunities: </p>
@@ -60,6 +60,9 @@ function EventPage() {
                         );
                     })}
                 </ul>
+            </div>
+            <div>
+              <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
             </div>
         </div>
     );

@@ -9,7 +9,6 @@ function ApplicationCard(props) {
             <Link to={`/applications/${applicationData.id}`}>
                 <h3>reason to apply: { applicationData.reason_apply }</h3>
                 <h3> Application for event: { applicationData.event }</h3>
-
             </Link>
         </div>
     );
