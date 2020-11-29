@@ -1,21 +1,23 @@
-.event-card {
-    width: 98%;
+.cards-wrapper {
+    width: 30%;
     margin: 10px;
     background-color: #f9f9f9;
-    border-radius: 3px;
+    border-radius: 3%;
     text-decoration: none;
+    margin-top: 2%;
+    margin-left: 2%;
+    border: transparent;
 }
 
-.event-card img {
+.ext-link {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ext-link img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.event-card:hover {
-    width: 100%;
-}
-
-.event-card h3 {
-    color: #171515;
+    height: 240px;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    display: block;
 }
