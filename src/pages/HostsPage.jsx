@@ -22,12 +22,15 @@ function HostsPage() {
     }, []);
 
     return (
-        <div id='hosts'>
-            <Link to='/newevent'><button type="button">Create an Event</button></Link>
-            <div>
-                <h1>Hosts</h1>
+        <div className='page-wrapper'>
+            <div className='page-header'>
+                <h1 className='page-title'>HOSTS</h1>
+                <Link className='ext-link' to='/newevent'>
+                    <button className='page-button' type="button">Create an Event</button>
+                </Link>
             </div>
-            <div id="hosts-list">
+            
+            <div className='page-main'>
                 {hostList.map((hostData, key) => {
                     return <HostCard key={key} hostData={hostData} />;
                 })}

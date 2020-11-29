@@ -22,12 +22,15 @@ function HeroesPage() {
     }, []);
 
     return (
-        <div id='heroes'>
-            <Link to='/apply'><button type="button">Apply for an Event</button></Link>
-            <div>
-                <h1>Heroes</h1>
+        <div className='page-wrapper'>
+            <div className='page-header'>
+                <h1 className='page-title'>HEROES</h1>
+                <Link className='ext-link' to='/apply'>
+                    <button className='page-button' type="button">Apply for an Event</button>
+                </Link>
             </div>
-            <div id="heroes-list">
+            
+            <div className='page-main'>
                 {heroList.map((heroData, key) => {
                     return <HeroCard key={key} heroData={heroData} />;
                 })}
