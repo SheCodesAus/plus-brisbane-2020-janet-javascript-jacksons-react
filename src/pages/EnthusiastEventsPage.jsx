@@ -23,15 +23,16 @@ function EventsPage() {
     }, []);
 
     return (
-        <div id='events'>
-            <Link to='/newevent'><button type="button">Create an Event</button></Link>
-            <div>
-                <h1>Events</h1>
-            </div>
-            <div>
+        <div className='page-wrapper'>
+            <div className='page-header'>
+                <h1 className='page-title'>EVENTS</h1>
+                <Link className='ext-link' to='/newevent'>
+                    <button className='page-button' type="button">Create an Event</button>
+                </Link>
                 <EventsFilter />
             </div>
-            <div id="events-list">
+            
+            <div className='page-main'>
                 {eventList.map((eventData, key) => {
                     return <EventCard key={key} eventData={eventData} />;
                 })}
