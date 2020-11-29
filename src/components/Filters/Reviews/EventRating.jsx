@@ -6,15 +6,15 @@ function EventRating(props) {
 
     switch(rating) {
         case 1:
-            return "OneStar"
+            return <img src="https://res.cloudinary.com/flifree/image/upload/v1606651074/Deep%20Tech%20Heroes/1-star_ihw3a8.png" alt="one star rating"/>
         case 2:
-            return "Two Stars"
+            return <img src="https://res.cloudinary.com/flifree/image/upload/v1606651075/Deep%20Tech%20Heroes/2-stars_k2h7wv.png" alt="two star rating"/>
         case 3:
-            return "Three Stars"
+            return <img src="https://res.cloudinary.com/flifree/image/upload/v1606651077/Deep%20Tech%20Heroes/3-stars_pd1og7.png" alt="three star rating"/>
         case 4:
-            return "Four Stars"
+            return <img src="https://res.cloudinary.com/flifree/image/upload/v1606651079/Deep%20Tech%20Heroes/4-stars_z6ovci.png" alt="four star rating"/>
         case 5:
-            return "Five Stars"
+            return <img src="https://res.cloudinary.com/flifree/image/upload/v1606651082/Deep%20Tech%20Heroes/5-stars_qxvbub.png" alt="five star rating"/>
     }
 };
 

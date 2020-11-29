@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Component } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import IsAnon from "../Filters/Application/IsAnon";
 
 function NotHostApplView(props) {
