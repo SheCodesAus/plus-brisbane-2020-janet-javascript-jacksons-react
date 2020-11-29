@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import IsAccepted from '../components/Filters/Application/IsAccepted';
+import IsAssessed from '../components/Filters/Application/IsAssessed';
+import ApplyKeynote from '../components/Filters/Application/ApplyKeynote';
+import ApplyFacilitator from '../components/Filters/Application/ApplyFacilitator';
+import ApplyMentor from '../components/Filters/Application/ApplyMentor';
+import ApplyExpert from '../components/Filters/Application/ApplyExpert';
+import ApplyEnthusiast from '../components/Filters/Application/ApplyEnthusiast';
+
 
 function ApplicationPage() {
+    const eventid = window.localStorage.getItem("event")
+
     const [applicationData, setApplicationData] = useState({ applications:[]});
     const { id } =useParams();
 
@@ -20,11 +30,29 @@ function ApplicationPage() {
         });
     }, [id]);
 
+    window.localStorage.setItem("appID", applicationData.id)
+
     return (
         <div>
-            <h1>Application {applicationData.id}</h1>
-            <h3>Tell us why you would like to be a Hero for this Event:{ applicationData.reason_apply }</h3>
-            <h3>Application for event: { applicationData.event }</h3>
+            <h1>Application from { applicationData.applicant_name }</h1>
+            <br/>
+            <IsAssessed applicationData={applicationData}/>
+            <IsAccepted applicationData={applicationData}/>
+            <p>Application # {applicationData.id}: </p>
+            <p>Applying to Event # { applicationData.event_id }</p>
+            <p>Application Details:{ applicationData.reason_apply }</p>
+            <p>Applying to be a</p>
+            <ApplyKeynote applicationData={applicationData} />
+            <ApplyFacilitator applicationData={applicationData} />
+            <ApplyMentor applicationData={applicationData} />
+            <ApplyExpert applicationData={applicationData} />
+            <ApplyEnthusiast applicationData={applicationData} />
+            <br/>
+            <p>If you need to contact the Applicant for more information, please send an email to { applicationData.applicant_email }</p>
+            <br/>
+            <p>Are you ready to assess this application? <Link to="/assess">YES</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link to="/events">NO</Link></p>
+            <br/>
         </div>
     );
 }
