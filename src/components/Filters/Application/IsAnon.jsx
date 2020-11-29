@@ -8,7 +8,7 @@ function IsAnon (props) {
     return (
         IsAnon ?
         <div>Applicant: Anonymous</div> :
-        <div>Applicant: <Link to={`/hero/${applicationData.owner}`}>{ applicationData.owner }</Link></div>
+        <div>Applicant: <Link to={`/hero/${applicationData.owner}`}>{ applicationData.applicant_name }</Link></div>
     )
 }
 

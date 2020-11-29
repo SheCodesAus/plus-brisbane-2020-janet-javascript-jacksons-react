@@ -37,6 +37,7 @@ import Footer from './components/Nav/Footer';
 import ApplicationsPage from './pages/ApplicationsPage';
 import ApplicationPage from './pages/ApplicationPage';
 import NewApplicationForm from './components/Forms/NewApplicationForm';
+import AssessApplForm from './components/AssessApplication/AssessApplForm';
 import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
 
 
@@ -132,16 +133,19 @@ function App() {
           <Route path="/unauthorised">
             <UnauthPage />
           </Route>
-          <Route path='/applications' exact>
+          <Route path="/assess">
+            <AssessApplForm />
+          </Route>
+          <Route path="/applications" exact>
             <ApplicationsPage />
           </Route>
           <Route path="/applications/:id">
             <ApplicationPage />
           </Route>
-          <Route path='/apply'>
+          <Route path="/apply">
             <NewApplicationForm />
           </Route>
-          <Route path='/confirmapplication'>
+          <Route path="/confirmapplication">
           <ConfirmApplicationPage />
           </Route>
           <Route path="/" exact>
