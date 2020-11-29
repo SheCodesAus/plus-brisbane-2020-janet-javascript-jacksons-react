@@ -6,8 +6,8 @@ function SignUpForm() {
         username: "",
         password: "",
         email: "",
-        // organisation_name: "",
-        // contact_person: "",
+        first_name: "Eli",
+        last_name: "Eli2",
     });
 
         const handleChange = (e) => {
