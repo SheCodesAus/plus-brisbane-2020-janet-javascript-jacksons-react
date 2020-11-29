@@ -7,12 +7,13 @@ function HostCard(props) {
     const { hostData } = props;
 
     return (
-        <div className="host-card">
-            <Link to={`/hosts/${hostData.id}`}>
+        <Link to={`/host/${hostData.id}`}>
+            <div className="host-card">  
                 <h3>{ hostData.organisation_name }</h3>
                 <img src={ hostData.organisation_logo } alt="Company-Logo" />
-            </Link>
-    </div>
+                </div>
+        </Link>
+    
     );
 }
 

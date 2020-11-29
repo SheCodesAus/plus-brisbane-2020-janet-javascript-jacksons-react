@@ -59,6 +59,7 @@ const BecomeHostForm = (props) => {
             <div>
                 <h1>Become a Host</h1>
                 <p>Do you organise events related to Deep Tech? Become a Host to list your events and be found by diverse Heroes.</p>
+                <p>Already a Host? <Link to="/signin">Sign In</Link></p>
             </div>
 
             <div>
