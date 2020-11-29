@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Carousel from "react-elastic-carousel";
+import EventCard from "../components/EventCard/EventCard";
 import "./HomePage.css";
 
-
 function HomePage() {
+    const [eventList, setEventList] = useState([]);
+
+    useEffect(() => {
+        fetch(`${process.env.REACT_APP_API_URL}events/`, {
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+        })
+        .then((results) => {
+            return results.json();
+        })
+        .then((data) => {
+            setEventList(data);
+        });
+    }, []);
+
     return (
         <div id="home-page">
 
@@ -23,6 +41,12 @@ function HomePage() {
                     Join us. Everybody’s welcome.
                 </p>
             </div>
+
+            <Carousel>
+                
+                    {eventList.map(eventData => <div key={eventData.id}><EventCard eventData={eventData}/></div>)}
+                
+            </Carousel>
 
             <div className="section2">
                 {/* <h2>How Does it Work?</h2> */}

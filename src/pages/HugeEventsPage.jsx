@@ -23,7 +23,11 @@ function EventsPage() {
     }, []);
 
     return (
-        <div>
+        <div id='events'>
+            <Link to='/newevent'><button type="button">Create an Event</button></Link>
+            <div>
+                <h1>Events</h1>
+            </div>
             <div>
                 <EventsFilter />
             </div>
