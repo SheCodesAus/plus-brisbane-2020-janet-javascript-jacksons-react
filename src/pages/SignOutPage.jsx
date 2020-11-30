@@ -3,7 +3,7 @@ import SignOutForm from "../components/Forms/SignOutForm";
 
 function SignOutPage() {
     return (
-        <div>
+        <div className="signOut">
             <h2>Are you sure you want to sign out?</h2>
             <SignOutForm />
         </div>

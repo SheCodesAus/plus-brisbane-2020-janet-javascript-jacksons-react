@@ -2,7 +2,11 @@ import React from "react";
 import NewEventForm from "../components/Forms/NewEventForm";
 
 function NewEventPage() {
-    return <NewEventForm />;
+    return (
+        <div className="newEvent">
+            <NewEventForm />
+        </div>
+        );
 }
 
 export default NewEventPage;

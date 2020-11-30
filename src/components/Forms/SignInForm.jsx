@@ -45,8 +45,8 @@ function SignInForm() {
 
     return (
         <form className="signin-form">
-            <h2>It is great to see you again!</h2>
-            <p>Sign in to continue</p>
+            <h2>It is great to see you again! </h2>
+            <p>Please Sign in to continue</p>
             <div>
                 <label htmlFor="username">Enter your username: </label>
                 <input
