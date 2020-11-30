@@ -1,73 +1,111 @@
-input {
-    width: 50%;
-    padding: 14px 24px;
-    margin: 8px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border: 2px solid #4E4F50;
-}
 
-input [type=text]:focus {
-    border: 6px solid #4E4F50;
-}
-
-select {
-    width: 40%; 
-    margin: 10px 0 10px 24px;
-    color: #7E7C73;
-    padding: 14px 24px;
-    font-size: 18px;
-    border: 2px solid #4E4F50;
-    border-radius: 3px;
-}
-
-/* button {
-    width: 25%;
-    height: 50px;
-    margin-top: 14px;
-    font-size: 18px;
-} */
-
-/* button:hover {
-    background-color: #7E7C73;
-    color: #171515;
-    border: 3px solid #171515;
-} */
-
-button {
-    background-color: #f9f9f9;
+.form-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-right: -3%;
+    margin-top: 1%;
+    justify-content: space-between;
+}
+
+.form-deco img {
+    width: 1000px;
+    position: sticky;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    border: 2px solid #043c6c;
-    color: #043c6c;
-    /* padding: 14px 28px; */
-    text-align: center;
-    text-decoration: none;
-    font-size: medium;
-    font-weight: bold;
-    border-radius: 3px;
-    transition-duration: 0.2s; 
+}
 
+.form-header h2 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.form-header p {
+    text-align: center;
+    width: 70%;
+    font-size: 22px;
+}
+
+.form-inputs {
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 15%;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5%;
+}
+
+.form-input label {
+    font-size: 20px;
+}
+
+.form-input input {
+    width: 70%;
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.form-input p {
+    font-size: 20px;
+}
+
+.form-input-radio {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.form-input-radio p {
+    font-size: 20px;
     width: 50%;
-    height: 50px;
-    margin-top: 14px;
 }
 
-button:hover {
-    background-color: #7E7C73;
-    color: #043c6c;
-    border: 3px solid #043c6c;
+#input-radio-1 {
+    width: 10%;
+    padding-left: 2%;
+    font-size: 20px;
 }
 
-.create-form {
-    margin: 0 15% 0 15%;
+.form-input-dropdown {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5%;
+    margin-top: 2%;
 }
 
-h1 {
-    text-align: center;
+.form-input-dropdown label {
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 1%;
 }
 
-label {
-    padding-right: 30px;
+.form-input-dropdown select {
+    font-size: 20px;
+    width: 70%;
+    height: 45px;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.button-area button {
+    width: 20%;
+    font-size: 20px;
 }
