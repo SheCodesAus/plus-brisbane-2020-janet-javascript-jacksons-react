@@ -24,11 +24,15 @@ function EventsPage() {
 
     return (
         <div className='page-wrapper'>
-            <div className='page-header'>
-                <h1 className='page-title'>EVENTS</h1>
-                <Link className='ext-link' to='/newevent'>
+            <div className="cover">
+                <img src="https://res.cloudinary.com/dikrdv4qy/image/upload/v1606439814/Background_bdvap8.png" alt=""></img>
+                <div class="cover-text">DEEP TECH EVENTS</div>
+                <Link className='ext-link-1' to='/newevent'>
                     <button className='page-button' type="button">Create an Event</button>
                 </Link>
+            </div>
+
+            <div className='page-header'>
                 <EventsFilter />
             </div>
             

@@ -23,3 +23,9 @@
     display: block;
     object-fit: cover;
 }
+
+.ext-link h3 {
+    justify-self: center;
+    font-size: x-large;
+    text-align: center;
+}

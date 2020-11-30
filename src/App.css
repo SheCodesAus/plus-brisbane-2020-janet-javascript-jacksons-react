@@ -1,5 +1,5 @@
 
-/* Events Page */
+/* Events, Hosts, Heroes Pages */
 .page-wrapper {
     width: 100%;
     margin-top: 3%;
@@ -12,6 +12,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    margin-top: 2%;
 }
  
 .ext-link {
@@ -33,6 +34,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 9%;
 }
 
 /* contact Us page */
@@ -66,3 +68,4 @@
 .newEvent {
     padding-top: 100px;
 }
+
