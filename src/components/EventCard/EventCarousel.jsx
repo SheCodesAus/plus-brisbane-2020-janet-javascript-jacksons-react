@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import EventCard from "./EventCard";
+import "./EventCarousel.css";
+
 
 function EventCarousel() {
     const [eventList, setEventList] = useState([]);
@@ -21,9 +23,11 @@ function EventCarousel() {
     }, []);
 
     return (
-        <Carousel>
+        <div className="styling-eventCarousel">
+        <Carousel itemsToShow={2}>
             {eventList.map(eventData => <div key={eventData.id}><EventCard eventData={eventData}/></div>)}
         </Carousel>
+        </div>
     );
 }
 
