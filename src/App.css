@@ -1,42 +1,4 @@
 
-/* Events, Hosts, Heroes Pages */
-.page-wrapper {
-    width: 100%;
-    margin-top: 3%;
-    padding-top: 50px;
-}
-
-.page-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    margin-top: 2%;
-}
- 
-.ext-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    padding-bottom: 2%;
-}
-
-.page-button {
-    width: 100%;
-    border-radius: 5%;
-    border: 2px solid #043c6c;
-    padding: 14px 40px;
-}
-
-.page-main {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 9%;
-}
-
 /* contact Us page */
 .contactUs {
     padding-top: 100px;
