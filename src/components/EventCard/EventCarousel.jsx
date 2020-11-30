@@ -24,7 +24,6 @@ function EventCarousel() {
 
     return (
         <div className="styling-eventCarousel">
-
         <Carousel itemsToShow={2}>
             {eventList.map(eventData => <div key={eventData.id}><EventCard eventData={eventData}/></div>)}
         </Carousel>
