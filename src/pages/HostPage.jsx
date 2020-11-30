@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import "./HostPage.css";
 
 function HostPage() {
     const [hostData, setHostData] = useState({
@@ -24,21 +25,23 @@ function HostPage() {
     });
 
     return (
-        <div>
+        <div className="page-wrapper">
             <div className='host-name'>
                 <h2>{ hostData.first_name } { hostData.last_name }</h2>
             </div>
-            <div className='host-image'>
-                <img src={ hostData.organisation_logo } alt="organisation_logo" />
+
+            <div className="host-wrapper">
+                <div className='host-image'>
+                    <img src={ hostData.organisation_logo } alt="organisation_logo" />
+                </div>
+                <div className='host-details'>
+                    <p>Organisation Name: {hostData.organisation_name}</p>
+                    <p>Organisation Phone: { hostData.host_phone }</p>
+                    <Link to="/becomehero"> <button type='button'>Become a Hero</button></Link>
+                    <Link to="/becomehost"><button type='button'>Become a Host</button></Link>
+                </div>
             </div>
-            <div className='host-details'>
-                <p>Organisation Name: {hostData.organisation_name}</p>
-                <p>Organisation Phone: { hostData.host_phone }</p>
-            </div>
-            <div>
-                <p>Become a <Link to="/becomehero">Hero</Link></p>
-                <p>Become a <Link to="/becomehost">Host</Link></p>
-            </div>
+
         </div>
     );
 }

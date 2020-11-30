@@ -64,7 +64,7 @@ function EventPage() {
                 </div >
             </div>
             <br/>
-            <div>
+            <div className="event-review">
                 <h3>Event Reviews</h3>
                 <ul>
                     {eventData.review_event.map((reviewData, key) => {
@@ -80,11 +80,11 @@ function EventPage() {
                 </ul>
             </div>
             <br/>
-            <div>
+            <div className="event-review">
                 <IsEventHost eventData={eventData} />
             </div>
             <br/>
-            <div>
+            <div className="event-review">
               <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
               <br/>
             </div>
