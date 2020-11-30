@@ -37,8 +37,9 @@ import Footer from './components/Nav/Footer';
 import ApplicationsPage from './pages/ApplicationsPage';
 import ApplicationPage from './pages/ApplicationPage';
 import NewApplicationForm from './components/Forms/NewApplicationForm';
-import AssessApplForm from './components/AssessApplication/AssessApplForm';
+import AssessApplForm from './components/Forms/AssessApplForm';
 import ConfirmApplicationPage from './pages/ConfirmApplicationPage';
+import NewReviewEventPage from './pages/NewReviewEventPage';
 
 
 function App() {
@@ -129,6 +130,9 @@ function App() {
           </Route>
           <Route path="/newevent">
             <NewEventPage />
+          </Route>
+          <Route path="/newreviewevent">
+            <NewReviewEventPage />
           </Route>
           <Route path="/unauthorised">
             <UnauthPage />

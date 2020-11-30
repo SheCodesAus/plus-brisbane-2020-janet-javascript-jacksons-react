@@ -50,8 +50,7 @@ function EventPage() {
                     <p>Date: { eventData.event_date } </p>
                     <p>Time: { eventData.event_time } </p>
                     <p>Details: { eventData.event_description }</p>
-                    We are expecting this to be a: <EventSize eventData={eventData} />
-                    {/* { eventData.event_size } */}
+                    {/* We are expecting this to be a: <EventSize eventData={eventData} /> */}
                     <p>The Event Host is seeking Heroes for the following opportunities: </p>
                     <SkillsKeynote eventData={eventData} />
                     <SkillsFacilitator eventData={eventData} />
@@ -79,6 +78,7 @@ function EventPage() {
                         );
                     })}
                 </ul>
+                <p>Have you been a Hero for this Event in the past? Would you like to write a review?<Link to="/newreviewevent"><button type='button'>Review this event</button></Link></p>
             </div>
             <br/>
             <div className="event-review">
