@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import HostCard from "./HostCard";
+import "./HostCarousel.css";
+
 
 function HostCarousel() {
     const [hostList, setHostList] = useState([]);
@@ -22,9 +23,11 @@ function HostCarousel() {
     }, []);
 
     return (
-        <Carousel>
-            {hostList.map(hostData => <div key={hostData.id}><HostCard hostData={hostData}/></div>)}
-        </Carousel>
+        <div className="styling-hostCarousel">
+            <Carousel itemsToShow={2}>
+                {hostList.map(hostData => <div key={hostData.id}><HostCard hostData={hostData}/></div>)}
+            </Carousel>
+        </div>
     );
 }
 

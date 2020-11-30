@@ -3,10 +3,9 @@ import { useParams, useHistory } from "react-router-dom";
 
 const AssessAppl = (props) => {
     const appid = window.localStorage.getItem("appID")
-    const eventid = window.localStorage.getItem("event")
 
     const [application, setApplication] = useState(props.currentApplication)
-    const { id } = useParams();
+    // const { id } = useParams();
     const history = useHistory();
     var statuscode = 0;
 

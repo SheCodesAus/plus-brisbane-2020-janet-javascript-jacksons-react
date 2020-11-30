@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Carousel from "react-elastic-carousel";
 import HeroCard from "./HeroCard";
+import "./HeroCarousel.css";
+
 
 function HeroCarousel() {
     const [heroList, setHeroList] = useState([]);
@@ -22,9 +23,11 @@ function HeroCarousel() {
     }, []);
 
     return (
-        <Carousel>
-            {heroList.map(heroData => <div key={heroData.id}><HeroCard heroData={heroData}/></div>)}
-        </Carousel>
+        <div className="styling-heroCarousel">
+            <Carousel itemsToShow={2}>
+                {heroList.map(heroData => <div key={heroData.id}><HeroCard heroData={heroData}/></div>)}
+            </Carousel>
+        </div>
     );
 }
 

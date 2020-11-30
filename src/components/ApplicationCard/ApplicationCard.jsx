@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import IsAnon from "../Filters/Application/IsAnon";
 import IsAccepted from '../Filters/Application/IsAccepted';
 import IsAssessed from '../Filters/Application/IsAssessed';
-import "./ApplicationCard.css";
 
 function ApplicationCard(props) {
     const { applicationData } = props;
