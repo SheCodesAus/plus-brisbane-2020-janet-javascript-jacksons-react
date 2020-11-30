@@ -1,6 +1,11 @@
 .home-page {
     width: 100%;
 }
+.cover {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
 
 .cover img { 
     width: 110%;
@@ -9,12 +14,6 @@
     margin-left: -100px;
     margin-right: -100px;
 }
-
-.cover {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
 
 .cover-text {
     position: absolute;
@@ -89,21 +88,32 @@
     justify-content: center;
     margin: auto;
 }
-
-.hosts-name {
+.eventCarousel h3 {
+    padding-right: 70px;  
+    padding-left: 70px;  
+    padding-top: 40px;   
+    text-align: center; 
+}
+.hostCarousel h3{
     padding-right: 70px;  
     padding-left: 70px;  
     padding-top: 40px;   
     text-align: center; 
 }
 
-.hosts-logos {
+.heroCarousel h3{
+    padding-right: 70px;  
+    padding-left: 70px;  
+    padding-top: 40px;   
+    text-align: center; 
+}
+/* .hosts-logos {
     width: 100%; 
     height: 200px;
     display: flex; 
     align-items: center; 
     justify-content: space-evenly;
-    } 
+    }  */
 
 .partners-name {
     padding-right: 70px;  
@@ -146,17 +156,31 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+    
     #home-page {
         width: 100%;
-    
     }
+   
+    .cover {
+        position: inherit;
+    }
+
     .cover img { 
-    width: 100%;
-    height: 300px;
-    padding-top: 50px;
-    margin-left: -100px;
-    margin-right: -100px;
+        width: 100%;
+        height: 300px;
+        padding-top: 50px;
+        margin-left: -100px;
+        margin-right: -100px;
     }
+
+    .cover-text {
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        font-weight: bold;
+        display: none;
+      }
 
     .section2 {
         width: 100%; 
