@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HeroCard from '../components/UserCard/HeroCard';
+import "./EventsPage.css";
 
 
 function HeroesPage() {
@@ -23,9 +24,10 @@ function HeroesPage() {
 
     return (
         <div className='page-wrapper'>
-            <div className='page-header'>
-                <h1 className='page-title'>HEROES</h1>
-                <Link className='ext-link' to='/apply'>
+            <div className="cover">
+                <img src="https://res.cloudinary.com/dikrdv4qy/image/upload/v1606439814/Background_bdvap8.png" alt=""></img>
+                <div class="cover-text">DEEP TECH HEROES</div>
+                <Link className='ext-link-1' to='/apply'>
                     <button className='page-button' type="button">Apply for an Event</button>
                 </Link>
             </div>

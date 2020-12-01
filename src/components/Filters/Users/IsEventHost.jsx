@@ -11,7 +11,6 @@ function IsEventHost (props) {
 
     return (
         IsEventHost ?
-        // <div>User is Event Host</div> :
         <HostApplView /> :
         <NotHostApplView />
     )

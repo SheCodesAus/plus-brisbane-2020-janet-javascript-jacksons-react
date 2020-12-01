@@ -1,36 +1,33 @@
 
-/* Events Page */
-  .page-wrapper {
-    width: 100%;
-    margin-top: 3%;
-  }
+/* contact Us page */
+.contactUs {
+    padding-top: 100px;
+    text-align: center;
+}
 
-  .page-header {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-  }
-  .page-title {
-      
-  } 
+.contactUs p {
+    padding-top: 50px;
+}
 
-  .ext-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-      padding-bottom: 2%;
-  }
+/* Sign in page */
+.signIn {
+    padding-top: 100px;
+}
 
-  .page-button {
-      width: 100%;
-      border-radius: 5%;
-  }
+/* Sign out page */
+.signOut {
+    padding-top: 100px;
+}
 
-  .page-main {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-  }
+/* Sign Up page */
+
+.signUp {
+    padding-top: 100px;
+}
+
+/* Newevent page */
+
+.newEvent {
+    padding-top: 100px;
+}
+
