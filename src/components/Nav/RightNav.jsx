@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import LoginControlNav from './LoginControlNav';
 
 const Ul = styled.ul`
   list-style: none;
@@ -22,6 +23,7 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
+    z-index: 10;
 
     a {
       text-decoration: none;
@@ -39,13 +41,18 @@ const Ul = styled.ul`
 const RightNav = ({ open }) => {
     return (
         <Ul open={open}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/events">Events</Link></li>
-                <li><Link to="/heroes">Heroes</Link></li>
-                <li><Link to="/hosts">Hosts</Link></li>
-                <li><Link to="/contact">Contact Us</Link></li>
-                <li><Link to="/signin">Sign In</Link></li> 
-                <li><Link to="/signout">Sign Out</Link></li>
+          <div className="nav-middle">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/events">Events</Link></li>
+            <li><Link to="/heroes">Heroes</Link></li>
+            <li><Link to="/hosts">Hosts</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+          </div>
+          <div className="nav-right">
+            <li><LoginControlNav /></li>
+          </div> 
+                
+                
         </Ul>
     )
 
