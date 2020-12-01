@@ -55,7 +55,7 @@ const AssessAppl = (props) => {
             <input
                 type="number"
                 id="id"
-                default={appid}
+                placeholder={appid}
                 onChange={handleChange}
             />
             <br/>
