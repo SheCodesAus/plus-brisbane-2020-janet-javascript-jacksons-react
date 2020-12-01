@@ -55,56 +55,64 @@ const BecomeHostForm = (props) => {
     };
 
     return (
-        <form className="create-form">
-            <div>
-                <h1>Become a Host</h1>
+        <form className="form-wrapper">
+            <div className="form-header">
+                <h2>Become a Host</h2>
                 <p>Do you organise events related to Deep Tech? Become a Host to list your events and be found by diverse Heroes.</p>
                 <p>Already a Host? <Link to="/signin">Sign In</Link></p>
             </div>
 
-            <div>
-                <label htmlFor="username">User Name</label>
-                <input type="text" id="username" onChange={handleHostChange}/>
+            <div className="form-inputs">
+                <div className="form-input">
+                    <label htmlFor="username">User Name</label>
+                    <input type="text" id="username" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="email">Email</label>
+                    <input type="text" id="email" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="first_name">First Name</label>
+                    <input type="text" id="first_name" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="last_name">Last Name</label>
+                    <input type="text" id="last_name" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="password">Password</label>
+                    <input type="password" id="password" onChange={handleHostChange}/>
+                </div>
+                
+                <div className="form-input">
+                    <label htmlFor="organisation_name">Your Organisation Name</label>
+                    <input type="text" id="organisation_name" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="organisation_logo">Your Organisation Logo</label>
+                    <input type="url" id="organisation_logo" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input">
+                    <label htmlFor="host_phone">Your Organisation Phone</label>
+                    <input type="text" id="host_phone" onChange={handleHostChange}/>
+                </div>
+                <div className="form-input-radio">
+                    <p>Do you want to receive our newsletter?</p>
+                    <label id="input-radio-1" htmlFor="rec_newsletter">
+                        <input type="radio" id="rec_newsletter" name="rec_newsletter" value="true" onChange={handleHostChange}/> Yes
+                    </label>
+                    <label id="input-radio-1" htmlFor="rec_newsletter">
+                        <input type="radio" id="rec_newsletter" name="rec_newsletter" value="false" onChange={handleHostChange}/> No
+                    </label>
+                </div>
+
+                <div className="button-area">
+                    <button type="cancel" onClick={handleHostCancel}>Cancel</button>
+                    <button type="submit" onClick={handleHostSubmit}>Submit</button>
+                </div>
+                
             </div>
-            <div>
-                <label htmlFor="email">Email</label>
-                <input type="text" id="email" onChange={handleHostChange}/>
-            </div>
-            <div>
-                <label htmlFor="first_name">First Name</label>
-                <input type="text" id="first_name" onChange={handleHostChange}/>
-            </div>
-            <div>
-                <label htmlFor="last_name">Last Name</label>
-                <input type="text" id="last_name" onChange={handleHostChange}/>
-            </div>
-            <div>
-                <label htmlFor="password">Password</label>
-                <input type="password" id="password" onChange={handleHostChange}/>
-            </div>
-            <div>
-                <p>Do you want to receive our newsletter?</p>
-                <label htmlFor="rec_newsletter">
-                    <input type="radio" id="rec_newsletter" name="rec_newsletter" value="true" onChange={handleHostChange}/> Yes
-                </label>
-                <label htmlFor="rec_newsletter">
-                    <input type="radio" id="rec_newsletter" name="rec_newsletter" value="false" onChange={handleHostChange}/> No
-                </label>
-            </div>
-            <div>
-                <label htmlFor="organisation_name">Your Organisation Name</label>
-                <input type="text" id="organisation_name" onChange={handleHostChange}/>
-            </div>
-            <div>
-                <label htmlFor="organisation_logo">Your Organisation Logo</label>
-                <input type="url" id="organisation_logo" onChange={handleHostChange}/>
-            </div>
-            <div>
-                <label htmlFor="host_phone">Your Organisation Phone</label>
-                <input type="text" id="host_phone" onChange={handleHostChange}/>
-            </div>
-            <button type="cancel" onClick={handleHostCancel}>Cancel</button>
-            <button type="submit" onClick={handleHostSubmit}>Submit</button>
+            
         </form>
     );
 }

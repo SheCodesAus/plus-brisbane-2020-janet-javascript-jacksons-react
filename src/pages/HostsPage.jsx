@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import HostCard from '../components/UserCard/HostCard';
-
+import "./EventsPage.css";
 
 function HostsPage() {
     const [hostList, setHostList] = useState([]);

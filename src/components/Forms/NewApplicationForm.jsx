@@ -53,78 +53,100 @@ function NewApplicationForm() {
         });
     };
 
-    return (
-            <form className='create-form'>
-                <h1>Apply for an Event</h1>
-                <p>You will need to be signed in as a Hero to be able to apply for an Event.</p>
-                <p>Already a Hero? <Link to="/signin">Sign In</Link></p>
-                <p>Not a Hero yet? <Link to="/becomehero">Become a Hero</Link></p>
+    const handleCancel = (e) => {
+        e.preventDefault();
+        history.push("/");
+        window.location.reload(true);
+    };
 
-                <br/>
-                <br/>
-                <p>What type of skills do you like to volunteer for the event?</p>
-                    <label htmlFor='apply_keynote'>Keynote Speaker</label>
-                    &nbsp;
-                    <input
-                        type='checkbox'
-                        id='apply_keynote'
-                        value='true'
-                        onChange={handleChange}
-                    />
-                    <br/>
-                    <label htmlFor='apply_facilitator'>Workshop Facilitator</label>
-                    &nbsp;
-                    <input
-                        type='checkbox'
-                        id='apply_facilitator'
-                        value='true'
-                        onChange={handleChange}
-                    />
-                    <br/>
-                    <label htmlFor='apply_mentor'>Supportive Mentor</label>
-                    &nbsp;
-                    <input
-                        type='checkbox'
-                        id='apply_mentor'
-                        value='true'
-                        onChange={handleChange}
-                    />
-                    <br/>
-                    <label htmlFor='apply_expert'>Topic Expert</label>
-                    &nbsp;
-                    <input
-                        type='checkbox'
-                        id='apply_expert'
-                        value='true'
-                        onChange={handleChange}
-                    />
-                    <br/>
-                    <label htmlFor='apply_enthusiast'>Deep Tech Enthusiast</label>
-                    &nbsp;
-                    <input
-                        type='checkbox'
-                        id='apply_enthusiast'
-                        value='true'
-                        onChange={handleChange}
-                    />
-                    <br/>
-                        <label htmlFor='reason_apply'>Tell us why you would like to be a Hero for this Event:</label>
+    return (
+            <form className="form-wrapper">
+                <div className="form-header">
+                    <h2>Apply for an Event</h2>
+                    <p>You will need to be signed in as a Hero to be able to apply for an Event.</p>
+                    <p>Already a Hero? <Link to="/signin">Sign In</Link></p>
+                    <p>Not a Hero yet? <Link to="/becomehero">Become a Hero</Link></p>
+                </div>
+                <div className="form-inputs">
+                    <div className="form-input-checkbox">
+                        <p>What skills can you bring to the event?</p>
+                        <div>
+                            <input
+                                
+                                type='checkbox'
+                                id='apply_keynote'
+                                value='true'
+                                onChange={handleChange}
+                            />
+                            <label htmlFor='apply_keynote'>Keynote Speaker</label>
+                        </div>
+                        
+                        <div>
                         <input
-                            type='text'
-                            id='reason_apply'
-                            required
+                            
+                            type='checkbox'
+                            id='apply_facilitator'
+                            value='true'
                             onChange={handleChange}
                         />
-           
-                
-                <br/>
-                <br/>
-                <h3>Check the details below are correct, then click Submit.</h3>
-                <p>Event number: { application.event_id }</p>
-                <p>Your reason for applying to be a Hero at this Event: { application.reason_apply }</p>
-                <br/>
-                <p>Are you ready to submit your application?</p>
-                <button type='submit' onClick={ handleSubmit }> Apply </button>
+                        <label htmlFor='apply_facilitator'>Workshop Facilitator</label>
+                        </div> 
+
+                        <div>
+                            <input
+                                
+                                type='checkbox'
+                                id='apply_mentor'
+                                value='true'
+                                onChange={handleChange}
+                            />
+                            <label htmlFor='apply_mentor'>Supportive Mentor</label>
+                        </div>
+
+                        <div>
+                            <input
+                                
+                                type='checkbox'
+                                id='apply_expert'
+                                value='true'
+                                onChange={handleChange}
+                            />
+                            <label htmlFor='apply_expert'>Topic Expert</label>
+                        </div>
+
+                        <div>
+                            <input
+                                
+                                type='checkbox'
+                                id='apply_enthusiast'
+                                value='true'
+                                onChange={handleChange}
+                            />
+                            <label htmlFor='apply_enthusiast'>Deep Tech Enthusiast</label>
+                        </div>
+                    </div>
+                    <div className="form-input">
+                            <label htmlFor='reason_apply'>Tell us why you would like to be a Hero for this Event:</label>
+                            <input
+                                type='text'
+                                id='reason_apply'
+                                required
+                                onChange={handleChange}
+                            />
+                    </div> 
+                </div>
+
+                <div className="form-confirm">
+                    <h2>Check the details below are correct, then click Submit.</h2>
+                    <div className="form-confirm-details">
+                        <p><b>Event number: </b>{ application.event_id }</p>
+                        <p><b>Your reason for applying to be a Hero at this Event: </b>{ application.reason_apply }</p>
+                    </div>
+                    <div className="button-area">
+                        <button type="cancel" onClick={handleCancel}>Cancel</button>
+                        <button type="submit" onClick={handleSubmit}>Apply</button>
+                    </div>
+                </div>
 
             </form>
     );
