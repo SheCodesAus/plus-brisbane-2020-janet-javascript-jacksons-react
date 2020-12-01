@@ -21,17 +21,43 @@ select {
     border-radius: 3px;
 }
 
-button {
+/* button {
     width: 25%;
     height: 50px;
     margin-top: 14px;
     font-size: 18px;
+} */
+
+/* button:hover {
+    background-color: #7E7C73;
+    color: #171515;
+    border: 3px solid #171515;
+} */
+
+button {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #043c6c;
+    color: #043c6c;
+    /* padding: 14px 28px; */
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 3px;
+    transition-duration: 0.2s; 
+
+    width: 50%;
+    height: 50px;
+    margin-top: 14px;
 }
 
 button:hover {
     background-color: #7E7C73;
-    color: #171515;
-    border: 3px solid #171515;
+    color: #043c6c;
+    border: 3px solid #043c6c;
 }
 
 .create-form {
