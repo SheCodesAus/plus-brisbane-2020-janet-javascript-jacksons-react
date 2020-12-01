@@ -1,47 +1,249 @@
-input {
+
+/* Form general styling */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Header */
+.form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3%;
     width: 50%;
-    padding: 14px 24px;
-    margin: 8px;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border: 2px solid #4E4F50;
 }
 
-input [type=text]:focus {
-    border: 6px solid #4E4F50;
-}
-
-select {
-    width: 40%; 
-    margin: 10px 0 10px 24px;
-    color: #7E7C73;
-    padding: 14px 24px;
-    font-size: 18px;
-    border: 2px solid #4E4F50;
-    border-radius: 3px;
-}
-
-button {
-    width: 25%;
-    height: 50px;
-    margin-top: 14px;
-    font-size: 18px;
-}
-
-button:hover {
-    background-color: #7E7C73;
-    color: #171515;
-    border: 3px solid #171515;
-}
-
-.create-form {
-    margin: 0 15% 0 15%;
-}
-
-h1 {
+.form-header h2 {
     text-align: center;
+    font-size: xx-large;
 }
 
-label {
-    padding-right: 30px;
+.form-header p {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    margin-top: 1%;
 }
+
+/* Form Confirmation */
+
+.form-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3%;
+    width: 50%;
+}
+
+.form-confirm-details {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 2.5%;
+    text-align: justify;
+    word-wrap: break-word;
+    padding-left: 15%;
+}
+
+.form-confirm-details p {
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 2.5%;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+/* Form inputs */
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3%;
+    width: 50%;
+    justify-items: center;
+    margin-top: 2%;
+}
+
+.form-inputs h2 {
+    text-align: left;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5%;
+    width: 100%;
+    justify-items: center;
+    padding-left: 15%;
+}
+
+.form-input label {
+    font-size: 20px;
+}
+
+.form-input input {
+    width: 82%;
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.form-input p {
+    font-size: 20px;
+}
+
+/* Dropdown styling */
+
+.form-input-dropdown {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5%;
+    width: 100%;
+    padding-left: 15%;
+}
+
+.form-input-dropdown label {
+    font-size: 20px;
+    width: 30%;
+}
+
+.form-input-dropdown select {
+    font-size: 20px;
+    width: 52%;
+    height: 45px;
+}
+
+/* Form radio button */
+.form-input-radio {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5%;
+    width: 100%;
+    padding-left: 15%;
+}
+
+.form-input-radio p {
+    font-size: 20px;
+    width: 50%;
+}
+
+#new-event {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5%;
+    width: 100%;
+    padding-left: 15%;
+}
+
+#new-event p {
+    width: 82%;
+    font-size: 20px;
+}
+
+#input-radio-1 {
+    width: 50%;
+    padding-left: 2%;
+    font-size: 20px;
+}
+
+/* Checkbox styling */
+
+.form-input-checkbox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5%;
+    width: 100%;
+    padding-left: 15%;
+}
+
+.form-input-checkbox p {
+    font-size: 20px;
+    width: 82%;
+}
+
+.form-input-checkbox div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.5%;
+}
+
+.form-input-checkbox label {
+    width: 40%;
+    margin: 2%;
+    font-size: 20px;
+}
+
+[type="checkbox"] {
+    opacity: 0;  
+}
+
+[type="checkbox"] + label{
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 25px;
+    padding-left: 30px;
+}
+
+[type="checkbox"] + label::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 18px;
+    height: 18px;
+    outline: 2px solid #aaa;
+}
+
+
+[type="checkbox"]:checked + label::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 18px;
+    height: 18px;
+    outline: 2px solid #5fd25f;
+    background-image: url(check-img.jpg);
+    background-size: contain;
+    transform: scale(1);
+    opacity: 1;
+    transition:all .3s ease;
+}
+
+[type="checkbox"]:not(:checked) + label::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 18px;
+    height: 18px;
+    outline: 2px solid #5fd25f;
+    background-image: url(check-img.jpg);
+    background-size: contain;
+    transform: scale(0);
+    opacity: 0;
+}
+
+/* Button Area Cancel/Submit */
+
+.form-input-radio {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5%;
+    width: 100%;
+    padding-left: 15%;
+}
+.button-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button-area button {
+    width: 30%;
+    font-size: 20px;
+}
+

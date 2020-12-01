@@ -44,37 +44,44 @@ function SignInForm() {
     };
 
     return (
-        <form className="signin-form">
-            <h2>It is great to see you again! </h2>
-            <p>Please Sign in to continue</p>
-            <div>
-                <label htmlFor="username">Enter your username: </label>
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Username"
-                    onChange={handleChange}
-                />
+        <form className="form-wrapper">
+            <div className="form-header">
+                <h2>It is great to see you again! </h2>
+                <p>Please Sign in to continue</p>
             </div>
-            &nbsp;
-            <div>
-                <label htmlFor="password">Enter your password: </label>
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    onChange={handleChange}
-                />
+            
+            <div className="form-inputs">
+                <div className="form-input">
+                    <label htmlFor="username">Enter your username: </label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Username"
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="form-input">
+                    <label htmlFor="password">Enter your password: </label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password"
+                        onChange={handleChange}
+                    />
+                </div>
+                <p id="password-reset">Forgot Your Password? Reset Password</p>
+                <p>New to Deep Tech Heroes? <Link to="/signup">Sign Up</Link></p>
+                <div className="button-area">
+                    <button type="submit" onClick={handleSubmit}>Sign In</button>
+                </div>
+                <div className="button-area">
+                    <button type="button" href="/about">Learn more about J-cubed</button>
+                </div>
+                
             </div>
-            <p id="password-reset">Reset Password</p>
-            <div>
-                <button type="submit" onClick={handleSubmit}>Sign In</button>
-            </div>
-            <p>New to Deep Tech Heroes? <Link to="/signup">Sign Up</Link></p>
-            <div>
-                <button type="button" href="/about">Learn more about J-cubed</button>
-            </div>
-            &nbsp;
+            
+            
+            
         </form>
     );
 }

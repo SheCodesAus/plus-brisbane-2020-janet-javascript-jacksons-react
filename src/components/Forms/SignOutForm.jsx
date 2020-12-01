@@ -11,7 +11,7 @@ function SignOutForm() {
     };
 
     return (
-        <div>
+        <div className="button-area">
             <button onClick={handleSignout}>Sign Out</button>
         </div>
     );

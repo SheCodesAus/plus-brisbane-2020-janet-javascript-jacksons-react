@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EventCard from '../components/EventCard/EventCard';
 import EventsFilter from "../components/Nav/EventsFilter";
+import "./EventsPage.css";
 
 
 function EventsPage() {
