@@ -44,49 +44,57 @@ function SignUpForm() {
     };
 
     return (
-        <form className="create-form">
-            <h1>Welcome to Deep Tech Heroes!</h1>
-            <p>Sign up, then become a Hero or a Host, or both!</p>
-
-            <label htmlFor="username">Create a Username</label>
-            <input
-                type="text"
-                id="username"
-                placeholder="Create a Username"
-                required
-                onChange={handleChange}
-            />
-            <br/>
-            <label htmlFor="password">Create a password</label>
-            <input
-                type="password"
-                id="password"
-                placeholder="Minimum 8 characters"
-                required
-                onChange={handleChange}
-            />
-            <br/>
-            <label htmlFor="email">Add Your Email</label>
-            <input
-                type="text"
-                id="email"
-                placeholder=""
-                required
-                onChange={handleChange}
-            />
-            <br/>
-            <br/>
-            <br/>
-            <button
-                type="submit"
-                onClick={ handleSubmit }
-            >Sign Up</button>
-            <br/>
-
-            <p>Username: { user.username }</p>
-            <p>Password: { user.password }</p>
-            <p>Email: { user.email }</p>
+        <form className="form-wrapper">
+            <div className="form-header">
+                <h1>Welcome to Deep Tech Heroes!</h1>
+                <p>Sign up, then become a Hero or a Host, or both!</p>
+            </div>
             
+            <div className="form-inputs">
+                <div className="form-input">
+                    <label htmlFor="username">Create a Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Create a Username"
+                        required
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <div className="form-input">
+                    <label htmlFor="password">Create a password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Minimum 8 characters"
+                        required
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <div className="form-input">
+                    <label htmlFor="email">Add Your Email</label>
+                    <input
+                        type="text"
+                    id="email"
+                    placeholder=""
+                    required
+                    onChange={handleChange}
+                    />
+                </div>
+            </div>
+            <div className="form-confirm">
+                <h2>Please confirm your details and click "Submit" to create an account</h2>
+                <div className="form-confirm-details">
+                    <p>Username: { user.username }</p>
+                    <p>Password: { user.password }</p>
+                    <p>Email: { user.email }</p>
+                </div>
+                <div className="button-area">
+                    <button type="submit" onClick={ handleSubmit }>Sign Up</button>
+                </div>
+            </div>    
         </form>
     );
 }

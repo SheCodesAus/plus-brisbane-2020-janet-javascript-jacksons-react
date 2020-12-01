@@ -141,7 +141,7 @@ function BecomeHeroForm() {
                     <div className="form-input-dropdown">
                         <label htmlFor="pref_pronoun">I would like to be called</label>
                         <select type="text" id="pref_pronoun" onChange={handleHeroChange}>
-                            <option  value="" disabled selected>--Select an option--</option>
+                            <option  value="" disabled selected></option>
                             <option  value="they/them">They/Them</option>
                             <option  value="she/her">She/Her</option>
                             <option  value="he/him">He/Him</option>
@@ -200,8 +200,8 @@ function BecomeHeroForm() {
                     </div>
 
                     <div className="button-area">
-                        <button type="cancel" onClick={handleHeroCancel}>Cancel</button>
-                        <button type="submit" onClick={handleHeroSubmit}>Submit</button>
+                        <button type="cancel" onClick={handleHeroCancel}>CANCEL</button>
+                        <button type="submit" onClick={handleHeroSubmit}>SUBMIT</button>
                     </div>
                     
                 </div>
