@@ -3,16 +3,14 @@ import { Link, useHistory } from "react-router-dom";
 
 function NewReviewEventForm() {
     const eventid = window.localStorage.getItem("event")
-    const owner = window.localStorage.getItem("owner")
     const history = useHistory();
-    var statuscode = 0;
 
     const [review, setNewReview] = useState({
-        event_id: "",
-        owner: "",
+        event_id: eventid,
+        event: eventid,
         comment: "",
         rating: "",
-        // reviewer: ""
+        reviewer: ""
     });
 
     const handleChange = (e) => {
@@ -24,7 +22,7 @@ function NewReviewEventForm() {
     }
 
     const postData = async () => {
-        // const token = window.localStorage.getItem("token")
+        const token = window.localStorage.getItem("token")
 
         const response = await fetch(
             `${process.env.REACT_APP_API_URL}events/newreview/`,
@@ -32,15 +30,12 @@ function NewReviewEventForm() {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    // 'Authorization': `Token ${token}`
+                    'Authorization': `Token ${token}`
                 },
                 body: JSON.stringify(review),
-            })
-            .then((response) => {
-                statuscode=(response.status);
-                console.log(statuscode);
-                return response.json();
-            });
+            }
+        );
+        return response.json();
     };
 
 
@@ -48,14 +43,8 @@ function NewReviewEventForm() {
         e.preventDefault();
         postData()
         .then((response) => {
-            // if(statuscode === 201) {
-            //     setNewReview(response);
-                window.localStorage.setItem("review", response)
-            //     history.push(`/events/${eventid}`);
-            // } else {
-            //     console.log(statuscode);
-            //     history.push("/unauthorised");
-            // }
+            window.localStorage.setItem("review", response.review);
+            history.push(`/events/${eventid}`);
         });
     };
 
@@ -70,22 +59,6 @@ function NewReviewEventForm() {
             <p>You need to be signed in to write a review. <Link to="/signin">Sign in</Link></p>
             <br/>
 
-            <label htmlFor="event_id">Which Event are you reviewing?</label>
-            <input
-                type="number"
-                id="event_id"
-                placeholder={eventid}
-                onChange={handleChange}
-            />
-            <br/>
-            <label htmlFor="owner">What is your User ID?</label>
-            <input
-                type="number"
-                id="owner"
-                placeholder={owner}
-                onChange={handleChange}
-                />
-            <br/>
             <label htmlFor="comment">Share your thoughts here:</label>
             <input
                 type="text"
@@ -94,7 +67,7 @@ function NewReviewEventForm() {
                 onChange={handleChange}
                 />
             <br/>
-            <label htmlFor="rating">Rate this Event (maximum of 5 stars)</label>
+            <label htmlFor="rating">Rate this Event</label>
             <select id='rating' onChange={handleChange}>
                 <option value="5">5 Stars</option>
                 <option value="4">4 Stars</option>
