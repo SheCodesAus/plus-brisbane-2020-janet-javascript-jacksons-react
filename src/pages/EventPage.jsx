@@ -34,6 +34,7 @@ function EventPage() {
     window.localStorage.setItem("event", eventData.id);
     window.localStorage.setItem("owner", eventData.owner);
     window.localStorage.setItem("host_username", eventData.host_username);
+    window.localStorage.setItem("eventName", eventData.event_name);
 
     return (
         <div className="page-wrapper">
