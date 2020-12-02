@@ -83,13 +83,12 @@ function EventPage() {
                     </div>
                     <p>Have you been a Hero for this Event in the past? Would you like to write a review?<Link to="/newreviewevent"><button type='button'>Review this event</button></Link></p>
                 </div>
-                <br/>
                 <div className="event-review2">
                     <IsEventHost eventData={eventData} />
                     <br/>
                     <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
                     <br/>
-                </div>
+                </div>           
             </div>
 
         </div>
