@@ -21,7 +21,6 @@ function NewEventForm() {
     });
 
     const handleChange = (e) => {
-        e.preventDefault();
         const { id, value } = e.target;
         setNewEvent((prevEvent) => ({
             ...prevEvent,
@@ -253,8 +252,8 @@ function NewEventForm() {
                 </div>
 
             <div className="button-area">
-                <button type="cancel" onClick={handleCancel}>Cancel</button>
-                <button type="submit" onClick={handleSubmit}>Publish New Event</button>
+                <button type="cancel" onClick={handleCancel}>CANCEL</button>
+                <button type="submit" onClick={handleSubmit}>PUBLISH NEW EVENT</button>
             </div>
                 
             </div>
