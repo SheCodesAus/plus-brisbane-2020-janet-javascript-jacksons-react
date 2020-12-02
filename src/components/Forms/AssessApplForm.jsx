@@ -3,6 +3,8 @@ import { useParams, useHistory } from "react-router-dom";
 
 const AssessAppl = (props) => {
     const appid = window.localStorage.getItem("appID")
+    const appName = window.localStorage.getItem("appName")
+    const eventName = window.localStorage.getItem("eventName")
 
     const [application, setApplication] = useState(props.currentApplication)
     // const { id } = useParams();
@@ -57,24 +59,9 @@ const AssessAppl = (props) => {
     return (
         <form className="form-wrapper">
             <div className="form-inputs">
-                <div className="form-input">
-                    <label htmlFor="id">Enter the Application number:</label>
-                    <input
-                        type="number"
-                        id="id"
-                        placeholder={appid}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className="form-input">
-                    <label htmlFor="id">Enter the Application number:</label>
-                    <input
-                        type="number"
-                        id="id"
-                        placeholder={appid}
-                        onChange={handleChange}
-                    />
-                </div>
+                <h2>Assessing Application for {eventName}</h2>
+                <h3>Applicant: {appName}</h3>
+                
                 <div className="form-input-checkbox">
                     <input
                         type="checkbox"

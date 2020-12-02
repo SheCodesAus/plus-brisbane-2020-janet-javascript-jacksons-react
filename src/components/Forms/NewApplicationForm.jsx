@@ -6,6 +6,8 @@ function NewApplicationForm() {
 
     const history = useHistory();
     const eventid = window.localStorage.getItem("event")
+    const eventName = window.localStorage.getItem("eventName");
+
 
     const [application, setNewApplication] = useState({
         event_id: eventid,
@@ -15,6 +17,7 @@ function NewApplicationForm() {
         apply_mentor: false,
         apply_expert: false,
         apply_enthusiast: false,
+        is_anon: false,
         event: eventid,
     });
 
@@ -69,7 +72,7 @@ function NewApplicationForm() {
                 </div>
                 <div className="form-inputs">
                     <div className="form-input-checkbox">
-                        <p>What skills can you bring to the event?</p>
+                        <p>Which Hero role/s are you applying for?</p>
                         <div>
                             <input
                                 
@@ -124,6 +127,7 @@ function NewApplicationForm() {
                             />
                             <label htmlFor='apply_enthusiast'>Deep Tech Enthusiast</label>
                         </div>
+
                     </div>
                     <div className="form-input">
                             <label htmlFor='reason_apply'>Tell us why you would like to be a Hero for this Event:</label>
@@ -134,12 +138,25 @@ function NewApplicationForm() {
                                 onChange={handleChange}
                             />
                     </div> 
+
+                    <div className="form-input-checkbox">
+                        <div>
+                            <input
+                                
+                                type='checkbox'
+                                id='is_anon'
+                                value='true'
+                                onChange={handleChange}
+                            />
+                            <label htmlFor='is_anon'>Would you prefer to remain anonymous to the public?</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="form-confirm">
                     <h2>Check the details below are correct, then click Submit.</h2>
                     <div className="form-confirm-details">
-                        <p><b>Event number: </b>{ application.event_id }</p>
+                        <p><b>Event name: </b>{ eventName }</p>
                         <p><b>Your reason for applying to be a Hero at this Event: </b>{ application.reason_apply }</p>
                     </div>
                     <div className="button-area">
