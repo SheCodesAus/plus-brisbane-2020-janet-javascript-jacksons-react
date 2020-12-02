@@ -12,19 +12,18 @@ function LoginControlNav() {
 
     const handleSignUp = (e) => {
         e.preventDefault();
-        window.location.href = "/signup"
+        window.location.href = "/signup";
     };
 
     const handleLogin = (e) => {
         e.preventDefault();
-        window.location.href = `/`;
-        window.location.reload(true)
+        window.location.href = "/";
     };
     
     const handleLogout = (e) => {
         e.preventDefault();
         window.localStorage.clear();
-        window.location.href = "/signout"
+        window.location.href = "/signout";
     };
     
     if (token) {
