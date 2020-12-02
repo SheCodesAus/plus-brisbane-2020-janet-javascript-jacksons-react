@@ -5,6 +5,8 @@ import BadgeExpert from '../components/Categories/Badges/BadgeExpert';
 import BadgeMentor from '../components/Categories/Badges/BadgeMentor';
 import BadgeFacilitator from '../components/Categories/Badges/BadgeFacilitator';
 import BadgeKeynote from "../components/Categories/Badges/BadgeKeynote";
+import "./HeroPage.css";
+
 
 function HeroPage() {
     const [heroData, setHeroData] = useState({
@@ -30,7 +32,7 @@ function HeroPage() {
     });
 
     return (
-        <div>
+        <div className="host-wrapper">
             <div className='hero-name'>
                 <h2>Hero Name: { heroData.first_name } { heroData.last_name }</h2>
             </div>

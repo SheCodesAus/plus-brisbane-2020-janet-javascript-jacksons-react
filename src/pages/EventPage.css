@@ -1,7 +1,14 @@
-.event-wrapper {
+.page-wrapper {
+    width: 100%;
+}
+.event-title {
+    padding-top:30px;
+}
+.event-wrapper1 {
     display:flex;
     flex-direction: row;
 }
+
 .event-image img {
     width: 500px;
     height: 500px;
@@ -14,6 +21,41 @@
     line-height: 30px;
 }
 
-.event-review {
-    padding-left: 30px;
+.event-wrapper2 {
+    display:flex;
+    flex-direction: row;
 }
+
+.event-review1 h3 {
+    padding-bottom: 20px;
+}
+.event-review1 p {
+    padding-top: 50px;
+}
+
+.event-review1 li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.event-review2 {
+    display:flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+.event-review2 h3 {
+    padding-bottom: 30px;
+}
+.event-review2 p {
+    padding-top: 15px;
+}
+
+.event-raring {
+    line-height: 0px;
+}
+
+.event-raring p {
+    padding-top: 25px;
+}
+
+

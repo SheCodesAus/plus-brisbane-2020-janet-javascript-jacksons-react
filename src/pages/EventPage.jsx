@@ -41,7 +41,7 @@ function EventPage() {
                 <h1>{ eventData.event_name }</h1>
             </div>
 
-            <div className="event-wrapper">
+            <div className="event-wrapper1">
                 <div className='event-image'>
                     <img src={ eventData.image } alt="" />
                 </div>
@@ -64,31 +64,34 @@ function EventPage() {
                 </div >
             </div>
             <br/>
-            <div className="event-review">
-                <h3>Event Reviews</h3>
-                <ul>
-                    {eventData.review_event.map((reviewData, key) => {
-                        return (
-                            <li key={key}>
-                                <p>Comment: { reviewData.comment }</p>
-                                <p>Rating: <EventRating reviewData={ reviewData } /></p>
-                                <p>Review by: { reviewData.reviewer }</p>
-                                <br/>
-                            </li>
-                        );
-                    })}
-                </ul>
-                <p>Have you been a Hero for this Event in the past? Would you like to write a review?<Link to="/newreviewevent"><button type='button'>Review this event</button></Link></p>
+            <div className="event-wrapper2">
+                <div className="event-review1">
+                    <h3>Event Reviews</h3>
+                    <div className="event-raring">
+                        <ul>
+                            {eventData.review_event.map((reviewData, key) => {
+                                return (
+                                    <li key={key}>
+                                        <p>Comment: { reviewData.comment }</p>
+                                        <p>Rating: <EventRating reviewData={ reviewData } /></p>
+                                        <p>Review by: { reviewData.reviewer }</p>
+                                        <br/>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                    <p>Have you been a Hero for this Event in the past? Would you like to write a review?<Link to="/newreviewevent"><button type='button'>Review this event</button></Link></p>
+                </div>
+                <br/>
+                <div className="event-review2">
+                    <IsEventHost eventData={eventData} />
+                    <br/>
+                    <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
+                    <br/>
+                </div>
             </div>
-            <br/>
-            <div className="event-review">
-                <IsEventHost eventData={eventData} />
-            </div>
-            <br/>
-            <div className="event-review">
-              <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
-              <br/>
-            </div>
+
         </div>
     );
 }
