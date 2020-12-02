@@ -27,7 +27,7 @@ function HostPage() {
     return (
         <div className="page-wrapper">
             <div className='host-name'>
-                <h2>{ hostData.first_name } { hostData.last_name }</h2>
+                <h2>{hostData.organisation_name}</h2>
             </div>
 
             <div className="host-wrapper">
@@ -35,7 +35,7 @@ function HostPage() {
                     <img src={ hostData.organisation_logo } alt="organisation_logo" />
                 </div>
                 <div className='host-details'>
-                    <p>Organisation Name: {hostData.organisation_name}</p>
+                    <p>Contact Person: { hostData.first_name } { hostData.last_name }</p>
                     <p>Organisation Phone: { hostData.host_phone }</p>
                     <Link to="/becomehero"> <button type='button'>Become a Hero</button></Link>
                     <Link to="/becomehost"><button type='button'>Become a Host</button></Link>
