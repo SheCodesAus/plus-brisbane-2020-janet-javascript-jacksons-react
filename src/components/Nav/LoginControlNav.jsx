@@ -12,31 +12,30 @@ function LoginControlNav() {
 
     const handleSignUp = (e) => {
         e.preventDefault();
-        window.location.href = "/signup"
+        window.location.href = "/signup";
     };
 
     const handleLogin = (e) => {
         e.preventDefault();
-        window.location.href = `/`;
-        window.location.reload(true)
+        window.location.href = "/";
     };
     
     const handleLogout = (e) => {
         e.preventDefault();
         window.localStorage.clear();
-        window.location.href = "/signout"
+        window.location.href = "/signout";
     };
     
     if (token) {
         return (
-            <div>
+            <div className="login-wrapper">
                 <Link className="loggin-item" onClick={handleLogin}>{user}</Link>
                 <Link className="loggin-item" onClick={handleLogout}>Sign Out</Link>
             </div>
         )
     }
     return (
-        <div>
+        <div className="login-wrapper">
             <Link className="loggin-item" onClick={handleSignUp}>Sign Up</Link>
             <Link className="loggin-item" onClick={handleSignin}>Sign In</Link>
         </div>

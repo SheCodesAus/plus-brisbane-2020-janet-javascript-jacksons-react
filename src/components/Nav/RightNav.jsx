@@ -48,11 +48,10 @@ const RightNav = ({ open }) => {
             <li><Link to="/hosts">Hosts</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </div>
-          <div className="nav-right">
+          
             <li><LoginControlNav /></li>
-          </div> 
-                
-                
+          
+               
         </Ul>
     )
 
