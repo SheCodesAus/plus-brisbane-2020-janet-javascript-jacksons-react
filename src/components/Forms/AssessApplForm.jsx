@@ -3,6 +3,8 @@ import { useParams, useHistory } from "react-router-dom";
 
 const AssessAppl = (props) => {
     const appid = window.localStorage.getItem("appID")
+    const appName = window.localStorage.getItem("appName")
+    const eventName = window.localStorage.getItem("eventName")
 
     const [application, setApplication] = useState(props.currentApplication)
     // const { id } = useParams();
@@ -47,39 +49,40 @@ const AssessAppl = (props) => {
             };
         });
     };
-
+    
+    const handleCancel = (e) => {
+        e.preventDefault();
+        history.push("/");
+        window.location.reload(true);
+    };
 
     return (
-        <form className="assess-application">
-            <label htmlFor="id">Enter the Application number:</label>
-            <input
-                type="number"
-                id="id"
-                placeholder={appid}
-                onChange={handleChange}
-            />
-            <br/>
-            <label htmlFor="is_accepted">Tick the box to ACCEPT this Application? Leave blank if application is not accepted.</label>
-            <input
-                type="checkbox"
-                id="is_accepted"
-                onChange={handleChange}
-                />
-            <br/>
-            <label htmlFor="is_assessed">Tick this box to mark the Application as ASSESSED: </label>
-            <input
-                type="checkbox"
-                id="is_assessed"
-                onChange={handleChange}
-                />  
-            <br/>          
-            <button 
-                type="submit"
-                onClick={ handleSubmit }
-            >
-            CONFIRM
-            </button>
-            <br/>
+        <form className="form-wrapper">
+            <div className="form-inputs">
+                <h2>Assessing Application for {eventName}</h2>
+                <h3>Applicant: {appName}</h3>
+                
+                <div className="form-input-checkbox">
+                    <input
+                        type="checkbox"
+                        id="is_accepted"
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="is_accepted">Tick the box to ACCEPT this Application? Leave blank if application is not accepted.</label>
+                </div>
+                <div className="form-input-checkbox">
+                    <input
+                        type="checkbox"
+                        id="is_assessed"
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="is_assessed">Tick this box to mark the Application as ASSESSED: </label>
+                </div>
+                <div className="button-area">
+                    <button type="cancel" onClick={handleCancel}>CANCEL</button>
+                    <button type="submit" onClick={handleSubmit}>CONFIRM</button>
+                </div>
+            </div>
         </form>
     );
 }

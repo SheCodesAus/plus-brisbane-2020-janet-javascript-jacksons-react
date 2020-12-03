@@ -1,7 +1,15 @@
-.event-wrapper {
+.page-wrapper {
+    width: 100%;
+    padding-top: 30px;
+}
+.event-title {
+    padding-top:30px;
+}
+.event-wrapper1 {
     display:flex;
     flex-direction: row;
 }
+
 .event-image img {
     width: 500px;
     height: 500px;
@@ -12,8 +20,45 @@
     padding-left: 20px;
     padding-top: 50px;
     line-height: 30px;
+    font-size: large;
 }
 
-.event-review {
-    padding-left: 30px;
+.event-wrapper2 {
+    display:flex;
+    flex-direction: row;
 }
+
+.event-review1 h3 {
+    padding-bottom: 20px;
+}
+.event-review1 p {
+    padding-top: 50px;
+}
+.event-review1 li {
+    list-style: none;
+    padding-top: 20px;
+}
+
+.event-review2 {
+    display:flex;
+    flex-direction: column;
+}
+.event-review2 h3 {
+    padding-bottom: 30px;
+}
+.event-review2 p {
+    padding-top: 15px;
+}
+
+.event-rating {
+    padding-right: 100px;
+    padding-left: 0px;
+    line-height: 10px;
+}
+
+.event-raring p {
+    padding-top: 25px;
+    padding-right: 50px;
+}
+
+

@@ -39,6 +39,7 @@ function SignInForm() {
         window.localStorage.setItem("token", response.token);
         window.localStorage.setItem("user", credentials.username);
         history.push("/events");
+        window.location.reload(true);
         });
         }
     };
@@ -70,12 +71,9 @@ function SignInForm() {
                     />
                 </div>
                 <p id="password-reset">Forgot Your Password? Reset Password</p>
-                <p>New to Deep Tech Heroes? <Link to="/signup">Sign Up</Link></p>
+                <p>New to Deep Tech Heroes? <Link to="/signup">SIGN UP</Link></p>
                 <div className="button-area">
-                    <button type="submit" onClick={handleSubmit}>Sign In</button>
-                </div>
-                <div className="button-area">
-                    <button type="button" href="/about">Learn more about J-cubed</button>
+                    <button type="submit" onClick={handleSubmit}>SIGN IN</button>
                 </div>
                 
             </div>

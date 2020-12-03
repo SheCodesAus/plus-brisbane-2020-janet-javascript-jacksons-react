@@ -10,7 +10,7 @@ import ApplyEnthusiast from '../components/Filters/Application/ApplyEnthusiast';
 
 
 function ApplicationPage() {
-    const eventid = window.localStorage.getItem("event")
+    const eventName = window.localStorage.getItem("eventName")
 
     const [applicationData, setApplicationData] = useState({ applications:[]});
     const { id } =useParams();
@@ -30,7 +30,8 @@ function ApplicationPage() {
         });
     }, [id]);
 
-    window.localStorage.setItem("appID", applicationData.id)
+    window.localStorage.setItem("appID", applicationData.id);
+    window.localStorage.setItem("appName", applicationData.applicant_name);
 
     return (
         <div>
@@ -39,7 +40,7 @@ function ApplicationPage() {
             <IsAssessed applicationData={applicationData}/>
             <IsAccepted applicationData={applicationData}/>
             <p>Application # {applicationData.id}: </p>
-            <p>Applying to Event # { applicationData.event_id }</p>
+            <p>Applying to Event: { eventName }</p>
             <p>Application Details:{ applicationData.reason_apply }</p>
             <p>Applying to be a</p>
             <ApplyKeynote applicationData={applicationData} />

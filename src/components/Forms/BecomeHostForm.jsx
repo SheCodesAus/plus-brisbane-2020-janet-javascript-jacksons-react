@@ -107,8 +107,8 @@ const BecomeHostForm = (props) => {
                 </div>
 
                 <div className="button-area">
-                    <button type="cancel" onClick={handleHostCancel}>Cancel</button>
-                    <button type="submit" onClick={handleHostSubmit}>Submit</button>
+                    <button type="cancel" onClick={handleHostCancel}>CANCEL</button>
+                    <button type="submit" onClick={handleHostSubmit}>SUBMIT</button>
                 </div>
                 
             </div>

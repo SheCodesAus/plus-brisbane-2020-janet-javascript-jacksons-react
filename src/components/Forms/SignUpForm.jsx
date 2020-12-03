@@ -92,7 +92,7 @@ function SignUpForm() {
                     <p>Email: { user.email }</p>
                 </div>
                 <div className="button-area">
-                    <button type="submit" onClick={ handleSubmit }>Sign Up</button>
+                    <button type="submit" onClick={ handleSubmit }>SIGN UP</button>
                 </div>
             </div>    
         </form>
