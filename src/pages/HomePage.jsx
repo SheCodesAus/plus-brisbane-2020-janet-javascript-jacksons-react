@@ -17,18 +17,25 @@ function HomePage() {
 
             <div className="section1">
                 <h1>Our mission</h1>
-                <p>
-                    Deep Tech should start and continue to be a diverse and inclusive community. 
-                    We believe that diversity of culture, gender, race, ethnicity, religious or spiritual beliefs, sexual orientation and abilities are integral to getting the best out of people and technology. 
-                    We want hosts that hold meet-ups, learnings, meetings, courses, accelerators and conferences that cater to all things Deep Tech and all people Deep Tech. Because no one should be left out. 
-                    We have created a place where heroes can find event hosts that align with their values and ideals.
-                    We want to grow a thriving, welcoming, thoughtful and creative environment where you can be yourself. 
-                    Join us. Everybody’s welcome.
-                </p>
+                <p>Deep Tech should start and continue to be a diverse and inclusive community. </p>
+                <p>We believe that diversity of culture, gender, race, ethnicity, religious or spiritual beliefs, sexual orientation and abilities are integral to getting the best out of people and technology. </p>
+                <p>We want hosts that hold meet-ups, learnings, meetings, courses, accelerators and conferences that cater to all things Deep Tech and all people Deep Tech. Because no one should be left out. </p>
+                <p>We have created a place where heroes can find event hosts that align with their values and ideals.</p>
+                <p>We want to grow a thriving, welcoming, thoughtful and creative environment where you can be yourself. </p>
+                <p>Join us. Everybody’s welcome.</p>
+            </div>
+
+            <div className="eventCarousel">
+                <h2>Upcoming Events</h2>
+                <EventCarousel />
+            </div>
+
+            <div className="heroCarousel">
+                <h2>Meet the Heros</h2>
+                <HeroCarousel />
             </div>
 
             <div className="section2">
-                {/* <h2>How Does it Work?</h2> */}
                 <div className="hero">
                     <h2>Are you a Hero?</h2>
                     <Link to="/"><img className= "Hero-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_12_qg3kc9.png" alt=""></img></Link>
@@ -47,27 +54,17 @@ function HomePage() {
                     <Link to="/"><img className= "Host-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_7_h40rzg.png" alt=""></img></Link>
 
                     <p>Big event coming up? Little one? In between? It doesn't matter what size or topic we have heroes that will suit!  
-                        Register as a host then advertise your event and see the available Heroes. Then sit back and wait for the like minded Heroes to apply. or you can search the Heroes and reach 
+                        Register as a host then advertise your event and see the available Heroes. Then sit back and wait for the like minded Heroes to apply or you can search the Heroes and reach 
                         out if you find someone who is the perfect fit!
 
                     </p>
 
-                    <Link to='/becomehost'><button type="button">Register an Event!</button></Link>
+                    <Link to='/newevent'><button type="button">Register an EVENT</button></Link>
                 </div>
             </div>
 
-            <div className="eventCarousel">
-                <h2>Our Events</h2>
-                <EventCarousel />
-            </div>
-
-            <div className="heroCarousel">
-                <h2>Our Heros</h2>
-                <HeroCarousel />
-            </div>
-
             <div className="hostCarousel">
-                <h2>Our Hosts</h2>
+                <h2>Current Event Hosts</h2>
                 <HostCarousel />
             </div>
             
