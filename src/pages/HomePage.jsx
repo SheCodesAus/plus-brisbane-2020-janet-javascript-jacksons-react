@@ -18,9 +18,8 @@ function HomePage() {
             <div className="section1">
                 <h1>Our mission</h1>
                 <p>
-                    Our mission is that Deep Tech which refer to the cutting edge and disruptive technologies that are based on engineering innovations and scientific advances and discoveries should start and continue to be a diverse and inclusive community. 
-                    We want to avoid the pitfalls of other industries that have tried to become diverse after the fact. 
-                    We believe that diversity of culture, gender, race, ethnicity, religious or spiritual beliefs, sexual orientation and ability are integral to getting the best out of people and technology. 
+                    Deep Tech should start and continue to be a diverse and inclusive community. 
+                    We believe that diversity of culture, gender, race, ethnicity, religious or spiritual beliefs, sexual orientation and abilities are integral to getting the best out of people and technology. 
                     We want hosts that hold meet-ups, learnings, meetings, courses, accelerators and conferences that cater to all things Deep Tech and all people Deep Tech. Because no one should be left out. 
                     We have created a place where heroes can find event hosts that align with their values and ideals.
                     We want to grow a thriving, welcoming, thoughtful and creative environment where you can be yourself. 
@@ -44,14 +43,16 @@ function HomePage() {
                 </div>
 
                 <div className="host">
-                    <h2>Are you a Host?</h2>
+                    <h2>Register an event!</h2>
                     <Link to="/"><img className= "Host-img" src="https://res.cloudinary.com/flifree/image/upload/v1605350477/Deep%20Tech%20Heroes/DTH_7_h40rzg.png" alt=""></img></Link>
 
-                    <p>Are you an organisation that is looking to create and innovate? Do you need people with a specific focus in deep tech? 
-                        Have a look around. Advertise your event and see the available Heroes. If you find a Hero who you think would be a great addition to your event make contact and find out what you have in common!
+                    <p>Big event coming up? Little one? In between? It doesn't matter what size or topic we have heroes that will suit!  
+                        Register as a host then advertise your event and see the available Heroes. Then sit back and wait for the like minded Heroes to apply. or you can search the Heroes and reach 
+                        out if you find someone who is the perfect fit!
+
                     </p>
 
-                    <Link to='/becomehost'><button type="button">Become a HOST</button></Link>
+                    <Link to='/becomehost'><button type="button">Register an Event!</button></Link>
                 </div>
             </div>
 
