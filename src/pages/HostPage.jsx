@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import "./HostPage.css";
 
+
 function HostPage() {
     const [hostData, setHostData] = useState({
         id: window.localStorage.getItem("id"),
