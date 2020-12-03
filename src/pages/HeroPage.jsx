@@ -33,15 +33,20 @@ function HeroPage() {
 
     return (
         <div className="page-wrapper">
-            <h2>Hero Name: { heroData.first_name } { heroData.last_name }</h2>
-
+            <h2>Meet our Heroes</h2>
             <div className="hero-wrapper1">
                 <div className="hero-image">
                     <img src={ heroData.hero_image } alt="hero-logo" />
                 </div>
                 <div className="hero-details">
-                    <p>Bio: {heroData.hero_bio}</p>
-                    <p>LinkedIn Profile: {heroData.linkedin_url}</p>
+                    <h2>{ heroData.first_name } { heroData.last_name }</h2>
+                    <br/>
+                    <h4>A note from {heroData.first_name }</h4>
+                    <p>{heroData.hero_bio}</p>
+                    <br/>
+                    <p>Connect with <a href="{heroData.linkedin_url}">{ heroData.first_name }</a> on LinkedIn</p>
+                    <br/>
+                    <h4>A bit of data on { heroData.first_name }</h4>
                     <p>{heroData.first_name} would like to be called { heroData.pref_pronounce }</p>
                 </div>
             </div>
