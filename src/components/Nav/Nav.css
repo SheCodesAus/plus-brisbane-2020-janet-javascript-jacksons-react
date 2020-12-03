@@ -39,7 +39,50 @@
         margin-right: 4%;
     }
 
+    img {
+        width: 100px;
+        height: auto;
+    }
     
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    
+    a:hover {
+        color: #b9b9b9;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ul {
+        /* display: flex; */
+        /* flex-direction: row; */
+        /* justify-content: space-between; */
+        margin-top: -5%;
+        margin-left: 38%;
+        width: 62%;
+    }
+    
+    
+    .nav-middle li {
+        word-wrap: none;
+        width: max-content;
+    }
+
+    .login-wrapper {
+        font-size: 20px;
+        width: 120%;
+        display: flex;
+        flex-direction: row;
+        margin-top: -2%;
+    }
+    
+    .loggin-item {
+        margin-right: 4%;
+    }
+
     img {
         width: 100px;
         height: auto;

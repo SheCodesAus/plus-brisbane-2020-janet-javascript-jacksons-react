@@ -59,6 +59,7 @@
     margin-right: auto;
     width: 80%;
     padding-top: 30px; 
+    text-align: justify;
 }
 
 .section2 {
@@ -93,6 +94,7 @@
     height: 250px;
     font-size: medium;
     line-height: 1.6;
+    text-align: justify;
 }
  
 .hero {
@@ -172,32 +174,25 @@ button {
 } 
 
 @media (max-width: 768px) {
-    
-    #home-page {
-        width: 100%;
-    }
-   
-    .cover {
-        position: inherit;
-    }
 
     .cover img { 
-        width: 100%;
+        width: 110%;
         height: 300px;
-        padding-top: 50px;
         margin-left: -100px;
-        margin-right: -100px;
+        margin-right: -50px;
     }
 
     .cover-text {
-        top: 25%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         font-size: 30px;
         font-weight: bold;
-        display: none;
       }
-
+    .section1 p {
+        text-size-adjust: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .section2 {
         width: 100%; 
         display: flex; 
@@ -206,6 +201,50 @@ button {
         justify-content: center;
         padding: 0px 70px 10px 70px; 
     } 
+
+    .section2 img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 4px;
+    } 
+
+    .section2 p {
+        padding-right: 20px;
+        padding-left: 20px;
+        text-align: justify;
+
+    }
+
+    .partners-name {
+        display: flex; 
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 250px;
+    }
+    .partners-logos {
+        display: flex; 
+        flex-direction: column;
+        padding-top: 150px;
+        align-items: center;
+    }
+
+    .partners-logos-img1 img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .partners-logos-img2 img{
+        width: 150px;
+        height: 80px;
+    }
+    
+    .partners-logos-img3 img{
+        width: 180px;
+        height: 50px;
+    }
 
 
 }
