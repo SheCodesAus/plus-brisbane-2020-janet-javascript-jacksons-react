@@ -18,10 +18,12 @@ function HeroCarousel() {
             return results.json();
         })
         .then((data) => {
+            data.sort((a,b) => new Date(a) < new Date(b) ? 1: -1);
             setHeroList(data);
         });
     }, []);
 
+    
     return (
         <div className="styling-heroCarousel">
             <Carousel itemsToShow={2}>
