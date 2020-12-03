@@ -68,7 +68,7 @@ function EventPage() {
             <div className="event-wrapper2">
                 <div className="event-review1">
                     <h3>Event Reviews</h3>
-                    <div className="event-raring">
+                    <div className="event-rating">
                         <ul>
                             {eventData.review_event.map((reviewData, key) => {
                                 return (
@@ -89,7 +89,7 @@ function EventPage() {
                     <br/>
                     <p>Would you like to attend this Event? Get a ticket { eventData.event_ticket }</p>
                     <br/>
-                </div>           
+                </div>            
             </div>
 
         </div>

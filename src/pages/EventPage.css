@@ -50,12 +50,15 @@
     padding-top: 15px;
 }
 
-.event-raring {
-    line-height: 0px;
+.event-rating {
+    padding-right: 100px;
+    padding-left: 0px;
+    line-height: 10px;
 }
 
 .event-raring p {
     padding-top: 25px;
+    padding-right: 50px;
 }
 
 

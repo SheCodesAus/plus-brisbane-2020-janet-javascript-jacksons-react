@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import "./HostPage.css";
 
+
 function HostPage() {
     const [hostData, setHostData] = useState({
         id: window.localStorage.getItem("id"),
@@ -27,7 +28,7 @@ function HostPage() {
     return (
         <div className="page-wrapper">
             <div className='host-name'>
-                <h2>{hostData.organisation_name}</h2>
+                <h2>Organisation Name: {hostData.organisation_name}</h2>
             </div>
 
             <div className="host-wrapper">

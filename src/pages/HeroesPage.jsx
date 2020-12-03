@@ -26,7 +26,7 @@ function HeroesPage() {
         <div className='page-wrapper'>
             <div className="cover">
                 <img src="https://res.cloudinary.com/dikrdv4qy/image/upload/v1606439814/Background_bdvap8.png" alt=""></img>
-                <div class="cover-text">DEEP TECH HEROES</div>
+                <div class="cover-text">Deep Tech Heroes</div>
                 {/* <Link className='ext-link-1' to='/apply'>
                     <button className='page-button' type="button">Apply for an Event</button>
                 </Link> */}
