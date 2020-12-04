@@ -9,13 +9,13 @@
 }
 
 .hero-image img {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 340px;
 }
 
 .hero-details {
     padding-left: 30px;
-    padding-top: 50px;
+    padding-top: 20px;
     line-height: 30px;
     font-size: large;
 }
