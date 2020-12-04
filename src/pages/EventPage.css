@@ -32,7 +32,7 @@
     padding-bottom: 20px;
 }
 .event-review1 p {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 .event-review1 li {
     list-style: none;
@@ -53,12 +53,8 @@
 .event-rating {
     padding-right: 100px;
     padding-left: 0px;
-    line-height: 10px;
+    line-height: 15px;
 }
 
-.event-raring p {
-    padding-top: 25px;
-    padding-right: 50px;
-}
 
 

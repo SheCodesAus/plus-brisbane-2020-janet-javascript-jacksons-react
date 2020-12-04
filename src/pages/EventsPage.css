@@ -41,3 +41,15 @@
     flex-wrap: wrap;
     padding-left: 9%;
 }
+
+.cover_events img {
+    width: 110%;
+    height: 450px;
+    padding-top: 0px;
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+.cover-text {
+    color: white;
+}

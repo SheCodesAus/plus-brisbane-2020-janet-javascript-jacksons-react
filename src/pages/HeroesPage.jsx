@@ -24,7 +24,7 @@ function HeroesPage() {
 
     return (
         <div className='page-wrapper'>
-            <div className="cover">
+            <div className="cover_events">
                 <img src="https://res.cloudinary.com/dikrdv4qy/image/upload/v1606439814/Background_bdvap8.png" alt=""></img>
                 <div class="cover-text">Deep Tech Heroes</div>
                 {/* <Link className='ext-link-1' to='/apply'>
