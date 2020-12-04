@@ -20,8 +20,7 @@ function HomePage() {
                 <p>Deep Tech should start and continue to be a diverse and inclusive community. </p>
                 <p>We believe that diversity of culture, gender, race, ethnicity, religious or spiritual beliefs, sexual orientation and abilities are integral to getting the best out of people and technology. </p>
                 <p>We want hosts that hold meet-ups, learnings, meetings, courses, accelerators and conferences that cater to all things Deep Tech and all people Deep Tech. Because no one should be left out. </p>
-                <p>We have created a place where heroes can find event hosts that align with their values and ideals.</p>
-                <p>We want to grow a thriving, welcoming, thoughtful and creative environment where you can be yourself. </p>
+                <p>We have created a place where heroes can find event hosts that align with their values and ideals. We want to grow a thriving, welcoming, thoughtful and creative environment where you can be yourself. </p>
                 <p>Join us. Everybody’s welcome.</p>
             </div>
 

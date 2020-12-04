@@ -42,7 +42,7 @@
     width: 100%; 
     align-content: center; 
     font-size: large;
-    line-height: 40px;
+    line-height: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -59,7 +59,7 @@
     margin-right: auto;
     width: 80%;
     padding-top: 30px; 
-    text-align: justify;
+    text-align: center;
 }
 
 .section2 {
